@@ -36,5 +36,13 @@ export default defineNuxtConfig({
                 { name: 'description', content: 'Детский центр развития.' }
             ]
         }
-    }
+    },
+    nitro: {
+        routeRules: { // Использовать кеширование на стороне браузера на сутки
+            '/fonts/**': { headers: { 'cache-control': 'public, max-age=86400' } },
+            '/_nuxt/**': { headers: { 'cache-control': 'public, max-age=86400, immutable' } },
+            '/images/**': { headers: { 'cache-control': 'public, max-age=86400, immutable' } },
+            '/sprite/**': { headers: { 'cache-control': 'public, max-age=86400, immutable' } },
+        },
+    },
 })
