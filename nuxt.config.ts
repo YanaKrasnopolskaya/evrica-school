@@ -52,10 +52,6 @@ export default defineNuxtConfig({
                     type: 'font/woff',
                     crossorigin: '',
                 },
-                {
-                    rel: 'preload',
-                    href: '/_nuxt/default.9KthVTgC.css',
-                    as: 'style' }
             ],
         }
     },
