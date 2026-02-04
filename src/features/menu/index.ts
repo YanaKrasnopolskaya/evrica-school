@@ -1,0 +1,1 @@
+export { default as TheMenu } from './ui/TheMenu.vue'
