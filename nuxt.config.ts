@@ -28,21 +28,44 @@ export default defineNuxtConfig({
     },
     app: {
         head: {
+            // инфо для SEO
             htmlAttrs: {
                 lang: 'ru'
             },
             title: 'Детский центр "Эврика"',
             meta: [
                 { name: 'description', content: 'Детский центр развития.' }
-            ]
+            ],
+            link: [
+                // предзагрузка шрифтов
+                {
+                    rel: 'preload',
+                    href: '/fonts/BlissPro-Light.woff2',
+                    as: 'font',
+                    type: 'font/woff2',
+                    crossorigin: '',
+                },
+                {
+                    rel: 'preload',
+                    href: '/fonts/BlissPro-Medium.woff',
+                    as: 'font',
+                    type: 'font/woff',
+                    crossorigin: '',
+                },
+                {
+                    rel: 'preload',
+                    href: '/_nuxt/default.9KthVTgC.css',
+                    as: 'style' }
+            ],
         }
     },
     nitro: {
-        routeRules: { // Использовать кеширование на стороне браузера на сутки
-            '/fonts/**': { headers: { 'cache-control': 'public, max-age=86400' } },
-            '/_nuxt/**': { headers: { 'cache-control': 'public, max-age=86400, immutable' } },
-            '/images/**': { headers: { 'cache-control': 'public, max-age=86400, immutable' } },
-            '/sprite/**': { headers: { 'cache-control': 'public, max-age=86400, immutable' } },
+        compressPublicAssets: true,   // включает сжатие для html, css, js и т.д.
+        routeRules: { // Использовать кеширование на стороне браузера на год
+            '/fonts/**': { headers: { 'cache-control': 'public, max-age=31536000' } },
+            '/_nuxt/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
+            '/images/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
+            '/sprite/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
         },
     },
 })
