@@ -3,58 +3,68 @@ import {BaseButton} from "~/shared/button";
 </script>
 
 <template>
-  <div class="container">
-    <footer class="footer">
-      <picture>
-        <source srcset="/images/tablet/tb-footer-logo.webp" type="image/webp" media="(min-width: 768px)"/>
-        <source srcset="/images/desktop/dt-footer-logo.webp" type="image/webp" media="(min-width: 1024px)"/>
-        <img class="footer__logo" src="/images/mobile/mb-footer-logo.png" alt="Логотив Эврика" width="290" height="144">
-      </picture>
-      <div class="footer__socials-wrapper">
-        <span class="footer__text">Мы в соцсетях</span>
-        <div class="socials">
-          <a href="" class="socials__item">
-            <svg class="footer__icon" width="38" height="38" aria-hidden="true">
+  <footer class="footer">
+    <div class="footer__about">
+      <div class="footer__logo">
+        <picture>
+          <source srcset="/images/tablet/tb-footer-logo.webp" type="image/webp" media="(min-width: 768px)"/>
+          <source srcset="/images/desktop/dt-footer-logo.webp" type="image/webp" media="(min-width: 1024px)"/>
+          <img src="/images/mobile/mb-footer-logo.png" alt="Логотив Эврика" width="290" height="144">
+        </picture>
+      </div>
+      <div class="socials">
+        <span class="socials__text">Мы&nbsp;в&nbsp;соцсетях</span>
+        <ul class="socials__list">
+          <li class="socials__link">
+            <svg class="socials__icon" width="38" height="38" aria-hidden="true">
               <use href="/sprite/sprite.svg#icon_tg"></use>
             </svg>
-          </a>
-          <a href="" class="socials__item">
-            <svg class="footer__icon" width="38" height="38" aria-hidden="true">
+          </li>
+          <li class="socials__link">
+            <svg class="socials__icon" width="38" height="38" aria-hidden="true">
               <use href="/sprite/sprite.svg#icon_vk"></use>
             </svg>
-          </a>
-          <a href="" class="socials__item">
-            <svg class="footer__icon" width="38" height="38" aria-hidden="true">
+          </li>
+          <li class="socials__link">
+            <svg class="socials__icon" width="38" height="38" aria-hidden="true">
               <use href="/sprite/sprite.svg#icon_instagram"></use>
             </svg>
-            <svg class="footer__icon footer__icon--star" width="10" height="9" aria-hidden="true">
+            <svg class="socials__icon socials__icon--star" width="9" height="9" aria-hidden="true">
               <use href="/sprite/sprite.svg#icon_star"></use>
             </svg>
-          </a>
-        </div>
-        <span class="footer__disclaimer">*Instagram — продукт компании Meta Platforms Inc., деятельность которой запрещена на территории РФ</span>
+          </li>
+        </ul>
+        <span class="socials__disclaimer">*Instagram&nbsp;&mdash; продукт компании Meta Platforms Inc., деятельность которой запрещена на&nbsp;территории&nbsp;РФ</span>
       </div>
-      <div class="footer__info">
-        <div class="footer__documents">
-          <a href="/files/privacy-policy.pdf" target="_blank" rel="noopener">Политика конфиденциальности</a>
-          <NuxtLink to="/information">Сведения об образовательной организации</NuxtLink>
-          <span>2025</span>
+    </div>
+    <div class="footer__info-wrapper">
+      <div class="info">
+        <a class="info__link" href="/files/privacy_policy.pdf" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a>
+        <NuxtLink class="info__link" to="/information">Сведения об&nbsp;образовательной организации</NuxtLink>
+        <span class="info__text">2025</span>
+      </div>
+    </div>
+    <div class="footer__developer-wrapper">
+      <div class="developer">
+        <div class="developer__info">
+          <span class="developer__info-text">Разработано командой</span>
+          <svg class="developer__logo" width="154" height="56" viewBox="0 0 154 56" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M44.9285 21.7695C46.359 19.2043 48.6884 17.3695 51.7698 17.3695C54.1142 17.3695 56.5554 18.1463 58.0092 19.2817C56.6766 15.2183 52.3756 12.8281 47.7111 12.8281C45.4393 12.8281 43.1727 13.6275 41.1266 14.9441C41.5765 15.4928 41.9977 16.0602 42.3902 16.6463C43.2512 17.9323 43.974 19.3084 44.5584 20.7745C44.691 21.1074 44.8145 21.439 44.9285 21.7695ZM43.3897 26.6311C43.1343 23.4484 41.7161 19.6372 39.1062 16.4713C35.6987 19.4575 33.2688 23.8399 33.1194 27.9092C33.1209 27.9415 33.1225 27.9737 33.1239 28.0062C33.1239 32.8201 35.0476 37.1909 38.1779 40.4114C41.628 36.615 43.289 31.6703 43.289 28.3047C43.289 27.7478 43.3229 27.1877 43.3897 26.6311ZM36.3528 42.1603C35.4665 41.2511 34.6775 40.2787 33.9858 39.2432C33.2971 38.212 32.7047 37.1182 32.2088 35.9617C31.8119 35.0361 31.4875 34.0945 31.2357 33.1371C29.759 34.9087 27.5761 36.1327 25.2976 36.1327C19.9781 36.1327 16.8774 31.9057 16.8774 26.6913C16.8774 24.6708 17.5248 22.7985 18.6276 21.263C14.7416 23.6105 12.1523 27.8132 12.1523 32.6072C12.1523 39.9666 18.2546 45.9326 25.7822 45.9326C30.1419 45.9326 33.6526 44.4027 36.3528 42.1603Z" fill="currentColor"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M52.9286 36.4841C60.7238 36.4841 65.4681 30.2506 65.4681 22.5611C65.4681 19.1811 64.2471 16.0824 62.2164 13.6707C66.6194 16.9421 69.4662 22.1425 69.4662 27.9988C69.4662 37.8995 61.3298 45.9255 51.293 45.9255C41.2563 45.9255 33.1199 37.8995 33.1199 27.9988C32.6353 17.1831 22.216 14.1953 16.2251 15.9808C12.8069 16.8843 10.0196 18.951 8.18359 21.6334C10.1831 16.4212 14.61 12.201 20.4836 10.6485C22.2931 10.1702 24.1119 9.97893 25.8906 10.0463C37.4079 10.3602 43.1515 20.4149 43.418 27.1623C43.5997 31.7634 48.3248 36.4841 52.9286 36.4841Z" fill="currentColor"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M135.901 25.4722H138.233V27.4055H135.969V33.9466H133.333V25.0855C133.333 24.0974 133.637 23.3133 134.245 22.7333C134.865 22.1532 135.733 21.8633 136.847 21.8633C137.242 21.8633 137.614 21.9063 137.963 21.9922C138.323 22.0674 138.622 22.1801 138.859 22.3305L138.166 24.151C137.862 23.947 137.507 23.8449 137.101 23.8449C136.302 23.8449 135.901 24.2638 135.901 25.1016V25.4722ZM81.5796 34.14C80.7354 34.14 79.9142 34.0436 79.116 33.851C79.0301 33.8303 78.9444 33.8085 78.859 33.7855C77.9916 33.5385 77.2932 33.2216 76.7637 32.8349L77.693 30.8694C78.2 31.2238 78.8027 31.5085 79.5012 31.7232C80.1996 31.9381 80.8981 32.0455 81.5965 32.0455C82.3738 32.0455 82.9484 31.9381 83.32 31.7232C83.6916 31.4977 83.8774 31.2024 83.8774 30.8371C83.8774 30.5686 83.7653 30.3484 83.5394 30.1766C83.3257 29.994 83.0441 29.849 82.6946 29.7416C82.3566 29.6342 81.8949 29.516 81.3093 29.3871C80.408 29.1831 79.6702 28.979 79.0956 28.7749C78.5211 28.5708 78.0254 28.2432 77.6086 27.7921C77.5599 27.738 77.5142 27.6818 77.4715 27.6234C77.1574 27.1946 77.0002 26.6494 77.0002 25.9877C77.0002 25.6342 77.0544 25.2994 77.1626 24.9835C77.255 24.7138 77.3867 24.4578 77.5579 24.2155C77.9296 23.6785 78.4873 23.2542 79.2308 22.9427C79.9856 22.6312 80.9036 22.4755 81.985 22.4755C82.6201 22.4755 83.2433 22.5363 83.8545 22.658C83.9696 22.6809 84.0845 22.706 84.1991 22.7333C84.9194 22.9051 85.5505 23.1522 86.0916 23.4744L85.2468 25.456C84.1538 24.8653 83.0611 24.5699 81.9686 24.5699C81.2022 24.5699 80.6333 24.6881 80.2615 24.9243C79.901 25.1607 79.7208 25.4722 79.7208 25.8588C79.7208 25.9944 79.7464 26.118 79.7977 26.2299C79.8926 26.437 80.0754 26.6033 80.3461 26.7289C80.7741 26.9114 81.4219 27.094 82.2895 27.2766C83.1907 27.4807 83.9282 27.6847 84.5028 27.8888C85.0774 28.0929 85.5677 28.4151 85.9729 28.8555C86.0324 28.9179 86.0872 28.9835 86.1374 29.0522C86.4446 29.468 86.5982 29.9986 86.5982 30.6438C86.5982 31.2882 86.4067 31.879 86.0236 32.4161C85.652 32.9423 85.0889 33.3612 84.3342 33.6727C83.5795 33.9842 82.6613 34.14 81.5796 34.14ZM115.557 34.14C114.622 34.14 113.715 34.0218 112.836 33.7855C111.969 33.5385 111.271 33.2216 110.741 32.8349L111.67 30.8694C112.178 31.2238 112.78 31.5085 113.478 31.7232C114.177 31.9381 114.875 32.0455 115.574 32.0455C116.351 32.0455 116.926 31.9381 117.298 31.7232C117.669 31.4977 117.855 31.2024 117.855 30.8371C117.855 30.5686 117.743 30.3484 117.517 30.1766C117.303 29.994 117.022 29.849 116.672 29.7416C116.334 29.6342 115.872 29.516 115.286 29.3871C114.385 29.1831 113.648 28.979 113.073 28.7749C112.498 28.5708 112.002 28.2432 111.586 27.7921C111.181 27.3411 110.978 26.7396 110.978 25.9877C110.978 25.6342 111.032 25.2994 111.14 24.9835C111.232 24.7138 111.364 24.4578 111.535 24.2155C111.907 23.6784 112.465 23.2542 113.208 22.9427C113.963 22.6312 114.881 22.4755 115.962 22.4755C116.717 22.4755 117.456 22.5614 118.176 22.7333C118.897 22.9051 119.528 23.1522 120.069 23.4744L119.224 25.456C118.131 24.8653 117.038 24.5699 115.945 24.5699C115.18 24.5699 114.611 24.6881 114.239 24.9243C113.878 25.1607 113.698 25.4722 113.698 25.8588C113.698 26.2455 113.906 26.5355 114.324 26.7289C114.752 26.9114 115.399 27.094 116.267 27.2766C117.168 27.4807 117.906 27.6847 118.48 27.8888C119.055 28.0929 119.545 28.4151 119.95 28.8555C120.367 29.2959 120.576 29.892 120.576 30.6438C120.576 31.2882 120.384 31.879 120.001 32.4161C119.63 32.9423 119.066 33.3612 118.312 33.6727C117.556 33.9842 116.638 34.14 115.557 34.14ZM145.03 33.5277C144.77 33.7103 144.449 33.8499 144.066 33.9466C143.695 34.0325 143.306 34.0755 142.9 34.0755C141.807 34.0755 140.968 33.8124 140.382 33.286C139.797 32.7597 139.504 31.9864 139.504 30.966V23.3616H142.139V25.4722H144.387V27.4055H142.139V30.9338C142.139 31.299 142.235 31.5836 142.427 31.7877C142.618 31.981 142.895 32.0777 143.255 32.0777C143.66 32.0777 144.021 31.9703 144.336 31.7555L145.03 33.5277ZM97.5094 25.2788V33.9466H94.9915V32.9477C94.8644 33.0942 94.7258 33.2265 94.5757 33.3444C93.958 33.8318 93.1504 34.0755 92.1528 34.0755C91.2967 34.0755 90.519 33.8929 89.8208 33.5277C89.1333 33.1625 88.593 32.6416 88.1985 31.9649C87.8039 31.2882 87.6067 30.5042 87.6067 29.6127C87.6067 28.7212 87.8039 27.9371 88.1985 27.2605C88.593 26.5838 89.1333 26.0629 89.8208 25.6977C90.519 25.3326 91.2967 25.1499 92.1528 25.1499C93.0767 25.1499 93.8401 25.3714 94.4431 25.8143C94.597 25.9275 94.7402 26.0551 94.8728 26.1972V25.2788H97.5094ZM109.176 25.2788V33.9466H106.658V32.9477C106.531 33.0942 106.393 33.2265 106.243 33.3444C105.625 33.8318 104.817 34.0755 103.819 34.0755C102.963 34.0755 102.186 33.8929 101.487 33.5277C100.801 33.1625 100.26 32.6416 99.8651 31.9649C99.4714 31.2882 99.2741 30.5042 99.2741 29.6127C99.2741 28.7212 99.4714 27.9371 99.8651 27.2605C100.26 26.5838 100.801 26.0629 101.487 25.6977C102.186 25.3326 102.963 25.1499 103.819 25.1499C104.979 25.1499 105.886 25.499 106.54 26.1972V25.2788H109.176ZM126.586 34.0755C125.629 34.0755 124.767 33.8876 124.001 33.5116C123.461 33.235 123.005 32.8841 122.632 32.459C122.484 32.2899 122.348 32.1091 122.227 31.9166C121.799 31.2399 121.584 30.472 121.584 29.6127C121.584 28.9966 121.694 28.4275 121.914 27.9054C122.001 27.6992 122.106 27.5003 122.227 27.3088C122.655 26.6322 123.246 26.1059 124.001 25.7299C124.767 25.3433 125.629 25.1499 126.586 25.1499C127.544 25.1499 128.4 25.3432 129.155 25.7299C129.674 25.9886 130.116 26.3184 130.481 26.7193C130.646 26.9011 130.795 27.0976 130.929 27.3088C131.357 27.9855 131.571 28.7534 131.571 29.6127C131.571 30.472 131.357 31.2399 130.929 31.9166C130.501 32.5933 129.91 33.125 129.155 33.5116C128.4 33.8876 127.544 34.0755 126.586 34.0755ZM92.6088 32.0133C93.2734 32.0133 93.8251 31.7984 94.2647 31.3688C94.3711 31.2622 94.4647 31.147 94.5454 31.0234C94.7975 30.6364 94.9236 30.1662 94.9236 29.6127C94.9236 28.8823 94.7042 28.3024 94.2647 27.8727C93.8251 27.4323 93.2734 27.2122 92.6088 27.2122C91.9327 27.2122 91.3752 27.4323 90.9357 27.8727C90.4969 28.3024 90.2768 28.8823 90.2768 29.6127C90.2768 30.3431 90.4969 30.9284 90.9357 31.3688C91.3752 31.7984 91.9327 32.0133 92.6088 32.0133ZM104.275 32.0133C104.703 32.0133 105.083 31.9246 105.417 31.7474C105.603 31.6487 105.775 31.5224 105.931 31.3688C106.371 30.9284 106.591 30.3431 106.591 29.6127C106.591 28.8823 106.371 28.3024 105.931 27.8727C105.764 27.7045 105.58 27.5684 105.379 27.4644C105.054 27.2963 104.686 27.2122 104.275 27.2122C103.6 27.2122 103.042 27.4323 102.603 27.8727C102.164 28.3024 101.943 28.8823 101.943 29.6127C101.943 30.3431 102.164 30.9284 102.603 31.3688C103.042 31.7984 103.6 32.0133 104.275 32.0133ZM126.586 32.0133C127.051 32.0133 127.457 31.9118 127.804 31.7089C127.963 31.6166 128.109 31.5032 128.242 31.3688C128.682 30.9284 128.901 30.3431 128.901 29.6127C128.901 28.8823 128.682 28.3024 128.242 27.8727C128.098 27.7239 127.939 27.6002 127.766 27.5017C127.427 27.3087 127.034 27.2122 126.586 27.2122C126.15 27.2122 125.763 27.304 125.425 27.4877C125.239 27.5885 125.069 27.7168 124.913 27.8727C124.474 28.3024 124.254 28.8823 124.254 29.6127C124.254 30.3431 124.474 30.9284 124.913 31.3688C125.058 31.5102 125.215 31.6283 125.386 31.7232C125.733 31.9166 126.133 32.0133 126.586 32.0133Z" fill="currentColor"/>
+          </svg>
         </div>
-        <div class="developer">
-          <div class="developer__info">
-            <span>Разработано командой</span>
-
-          </div>
+        <div class="developer__btn-wrapper">
           <base-button class="developer__btn">
             <span>Узнать подробнее</span>
-            <svg class="footer__icon footer__icon--arrow" width="18" height="15" aria-hidden="true">
+            <svg class="developer__btn-icon" width="16" height="15" aria-hidden="true">
               <use href="/sprite/sprite.svg#icon_arrow"></use>
             </svg>
           </base-button>
         </div>
       </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 </template>
 
 <style scoped lang="scss">
@@ -64,43 +74,134 @@ import {BaseButton} from "~/shared/button";
   align-items: center;
   justify-content: center;
   gap: 40px;
-  &__logo {
+  @include tablet {
+    margin: 0;
+    padding: 0 20px;
+  }
+  @include desktop {
+    padding: 0 60px;
+    gap: 60px;
+  }
+  &__about {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+  &__logo img {
     width: 290px;
     height: 144px;
     @include tablet {
       width: 423px;
       height: 209px;
     }
+    @include desktop {
+      width: 424px;
+      height: 210px;
+    }
+  }
+  &__info-wrapper {
+    width: 100%;
+    border-top: 1px solid $green;
+  }
+  &__developer-wrapper {
+    padding: 16px;
+    @include tablet {
+      padding: 16px 0;
+    }
+    @include desktop {
+      width: 100%;
+      padding: 16px 60px;
+    }
+  }
+}
+.socials {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  @include tablet {
+    max-width: 641px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 26px 48px;
+  }
+  @include desktop {
+    margin-right: 67px;
   }
   &__text {
     font-weight: 500;
     font-size: 1.75rem;
     line-height: 100%;
-    letter-spacing: -2%;
+    letter-spacing: -0.02em;
     text-align: center;
     color: $red-main;
     @include tablet {
       grid-column: span 2;
       font-size: 2.5rem;
     }
+    @include desktop {
+      text-align: start;
+    }
   }
-  &__socials-wrapper {
-    display: grid;
-    gap: 20px;
-    justify-content: center;
+  &__list {
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 20px;
     @include tablet {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 26px 48px;
-      margin: 0 43.5px;
+      margin-bottom: 0;
+    }
+  }
+  &__link {
+    position: relative;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    border: 0.8px solid $brown;
+    background: $white;
+    margin-left: -12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:first-child {
+      margin-left: 0;
+    }
+    @include tablet {
+      width: 120px;
+      height: 120px;
+      margin-left: -16px;
     }
   }
   &__icon {
     width: 38px;
     height: 38px;
+    color: $brown;
     @include tablet {
       width: 48px;
       height: 48px;
+    }
+  }
+  &__icon--star {
+    position: absolute;
+    width: 10px;
+    height: 9px;
+    top: 20px;
+    right: 18px;
+    color: $red-main;
+    @include tablet {
+      width: 12px;
+      height: 11px;
+      top: 26px;
+      right: 24px;
     }
   }
   &__disclaimer {
@@ -111,137 +212,157 @@ import {BaseButton} from "~/shared/button";
     text-align: center;
     color: $red-main;
     @include tablet {
+      margin-top: 10px;
       font-size: 1rem;
       text-align: start;
     }
   }
-  &__info {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    align-items: center;
-    justify-content: center;
+}
+.info {
+  padding: 19px 0 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 120%;
+  letter-spacing: 0;
+  text-align: center;
+  color: $green;
+  margin-bottom: -45px;
+  @include tablet {
+    padding: 19px 0 20px;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 32px;
+    font-size: 1rem;
+    margin-bottom: 0;
   }
-  &__documents {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    @include tablet {
-      flex-direction: row;
-      justify-content: flex-start;
-      gap: 32px;
-    }
-  }
-  &__documents span {
+  &__text {
+    font-size: 1rem;
     @include tablet {
       margin-left: auto;
     }
   }
-  &__documents a,
-  &__documents span {
-    font-weight: 500;
-    font-size: 0.875rem;
-    line-height: 120%;
-    letter-spacing: 0;
-    text-align: center;
-    color: $green;
-  }
-}
-.socials {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  &__item {
-    position: relative;
-    width: 95px;
-    height: 95px;
-    border-radius: 50%;
-    background: $white;
-    border: 0.8px solid $brown;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: -10px;
-    z-index: 1;
-    @include tablet {
-      width: 120px;
-      height: 120px;
-      margin-left: -20px;
-    }
-    &:first-child {
-      margin-left: 0;
-    }
-  }
-}
-.footer__icon--star {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  color: $red-main;
-  width: 10px;
-  height: 9px;
-  @include tablet {
-    top: 30px;
-    right: 22px;
-    width: 12px;
-    height: 11px;
-  }
 }
 .developer {
-  margin: 16px;
   padding: 32px 40px 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
   align-items: center;
   justify-content: center;
-  &:hover {
-    border: 2px solid rgba(131, 217, 227, 0.4);
-    border-radius: 60px;
-  }
-  &:hover .developer__btn{
-    background: radial-gradient(64.96% 259.75% at 50% 50%, #03A5C9 0%, #005D83 67.44%, #002C3E 100%);
-    color: $white;
-  }
-  &:hover .developer svg{
-    color: $white;
-  }
+  gap: 14px;
+  border: 2px solid transparent;
+  border-radius: 48px;
+  transition: border-color 0.4s ease;
   @include tablet {
-    width: 100%;
+    padding: 10px 20px 20px 44px;
     flex-direction: row;
+    gap: 45px;
+  }
+  @include desktop {
+    padding: 10px 14px 20px 40px;
     justify-content: space-between;
   }
-  &__info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0;
-    & span {
-      font-weight: 600;
-      font-size: 0.875rem;
-      line-height: 120%;
-      letter-spacing: 0;
-      color: rgba(0, 0, 0, 1);
+  &:hover {
+    border-color: rgba(131, 217, 227, 0.4);
+    .developer__btn-wrapper {
+      background: rgba(25, 202, 228, 0.08);
     }
+    .developer__btn {
+      color: $white;
+      background: radial-gradient(64.96% 259.75% at 50% 50%, #03A5C9 0%, #005D83 67.44%, #002C3E 100%);
+      box-shadow: 0 0 12px 0 rgba(255, 255, 255, 1) inset,
+      0 -24px 32px 0 rgba(255, 255, 255, 0.22) inset,
+      0 8px 24px -16px rgba(255, 255, 255, 0.24) inset,
+      0 36px 32px -16px rgba(3, 165, 201, 0.21),
+      0 8px 16px -8px rgba(3, 165, 201, 0.12),
+      0 2px 4px -8px rgba(3, 165, 201, 0.08);
+    }
+    .developer__btn-icon {
+      color: $white;
+    }
+    .developer__logo path:nth-child(1) {
+      color: rgba(0, 93, 131, 1);
+    }
+    .developer__logo path:nth-child(2) {
+      color: rgba(25, 202, 228, 1);
+    }
+  }
+  &__btn-wrapper {
+    padding: 6px;
+    background: $white;
+    border-radius: 60px;
   }
   &__btn {
     width: 264px;
     height: 60px;
-    border-radius: 60px;
-    padding: 6px;
-    background: rgba(25, 202, 228, 0.08);
-    font-weight: 500;
+    padding: 19px;
+    gap: 10px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
     font-size: 0.875rem;
     line-height: 120%;
     letter-spacing: 0;
+    vertical-align: middle;
     color: rgba(0, 44, 62, 1);
-    gap: 10px;
+    background: rgba(25, 202, 228, 0.08);
+    box-shadow: none;
+    border-radius: 60px;
+    transition: background 0.4s ease, box-shadow 0.4s ease, color 0.4s ease;
+    @include tablet {
+      font-size: 1rem;
+      height: 68px;
+    }
+  }
+  &__btn-icon {
+    width: 16px;
+    height: 15px;
+    color: rgba(0, 44, 62, 1);
+    transition: color 0.4s ease;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    @include tablet {
+      flex-direction: row;
+    }
+    @include desktop {
+      gap: 17px;
+    }
+  }
+  &__info-text {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    white-space: nowrap;
+    color: rgba(0, 0, 0, 1);
+    margin-bottom: -4px;
+    @include tablet {
+      font-size: 1rem;
+    }
+  }
+  &__logo {
+    width: 154px;
+    height: 56px;
+    color: rgba(16, 18, 22, 1);
+    @include tablet {
+      position: relative;
+      left: 6px;
+    }
+    @include desktop {
+      position: static;
+    }
+  }
+  &__logo path {
+    transition: color 0.4s ease;
   }
 }
 </style>

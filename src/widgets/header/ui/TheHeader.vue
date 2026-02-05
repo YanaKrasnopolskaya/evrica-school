@@ -47,6 +47,7 @@ const toggleMenu = () => {
 
 <style scoped lang="scss">
 .header-wrapper {
+  width: 100%;
   background: inherit;
   border-bottom: 2px solid $red-light;
   @include desktop {
@@ -55,7 +56,6 @@ const toggleMenu = () => {
 }
 .header {
   padding: 10px 0 8px;
-  max-width: 1440px;
   display: flex;
   align-items: center;
   justify-content: space-between;
