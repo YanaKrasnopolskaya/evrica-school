@@ -1,8 +1,8 @@
 <script setup lang="ts">
 interface Button {
-  variant?: 'primary' | 'secondary',
-  type?: 'button' | 'submit' | 'reset',
-  state?: 'default' | 'active' | 'error' | 'success'
+  variant?: 'primary' | 'secondary';
+  type?: 'button' | 'submit' | 'reset';
+  state?: 'default' | 'active' | 'error' | 'success';
 }
 
 withDefaults(defineProps<Button>(), {
@@ -14,7 +14,14 @@ withDefaults(defineProps<Button>(), {
 </script>
 
 <template>
-  <button class="btn" :class="[`btn__${variant}`, { 'btn__is-error': state === 'error','btn__is-success': state === 'success' }]" :type="type">
+  <button
+    class="btn"
+    :class="[
+      `btn__${variant}`,
+      { 'btn__is-error': state === 'error', 'btn__is-success': state === 'success' },
+    ]"
+    :type="type"
+  >
     <slot />
   </button>
 </template>

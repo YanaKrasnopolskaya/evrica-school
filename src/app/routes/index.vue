@@ -1,10 +1,9 @@
 <script setup>
-
-import {HomePage} from "@/pages/home/index.ts";
+import { HomePage } from '@/pages/home/index.ts';
 </script>
 
 <template>
   <main>
-    <HomePage/>
+    <HomePage />
   </main>
 </template>

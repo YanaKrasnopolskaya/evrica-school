@@ -1,14 +1,13 @@
 <script setup lang="ts">
-
-import {TheNavigation} from "~/features/navigation";
-import {BaseButton} from "~/shared/button";
-import {TheMenu} from "~/features/menu";
+import { TheNavigation } from '~/features/navigation';
+import { BaseButton } from '~/shared/button';
+import { TheMenu } from '~/features/menu';
 
 const isOpenMenu = ref(false);
 
 const toggleMenu = () => {
   isOpenMenu.value = !isOpenMenu.value;
-}
+};
 </script>
 
 <template>
@@ -18,8 +17,18 @@ const toggleMenu = () => {
         <div class="header__logo-wrapper">
           <NuxtLink to="/">
             <picture>
-              <source srcset="/images/desktop/dt-header-logo.webp" type="image/webp" media="(min-width: 768px)"/>
-              <img class="header__logo" src="/images/mobile/mb-header-logo.png" alt="Логотип Эврика" width="101" height="36"/>
+              <source
+                srcset="/images/desktop/dt-header-logo.webp"
+                type="image/webp"
+                media="(min-width: 768px)"
+              />
+              <img
+                class="header__logo"
+                src="/images/mobile/mb-header-logo.png"
+                alt="Логотип Эврика"
+                width="101"
+                height="36"
+              />
             </picture>
           </NuxtLink>
         </div>
@@ -32,7 +41,12 @@ const toggleMenu = () => {
             </svg>
           </button>
           <button v-else class="header__menu-btn" aria-label="Меню" @click="toggleMenu">
-            <svg class="header__menu-icon header__menu-close-icon" width="12" height="12" aria-hidden="true">
+            <svg
+              class="header__menu-icon header__menu-close-icon"
+              width="12"
+              height="12"
+              aria-hidden="true"
+            >
               <use href="/sprite/sprite.svg#icon_close"></use>
             </svg>
           </button>
@@ -42,7 +56,6 @@ const toggleMenu = () => {
     </div>
   </div>
 </template>
-
 
 <style scoped lang="scss">
 .header-wrapper {
@@ -66,7 +79,7 @@ const toggleMenu = () => {
   }
   &__logo-wrapper {
     @include desktop {
-      padding: 13px 9px 9px 8px ;
+      padding: 13px 9px 9px 8px;
     }
   }
   &__logo {

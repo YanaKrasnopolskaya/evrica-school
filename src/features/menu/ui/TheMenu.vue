@@ -1,7 +1,6 @@
 <script setup lang="ts">
-
-import {TheNavigation} from "~/features/navigation";
-import {BaseButton} from "~/shared/button";
+import { TheNavigation } from '~/features/navigation';
+import { BaseButton } from '~/shared/button';
 
 defineProps<{ isOpen: boolean }>();
 </script>
@@ -9,8 +8,8 @@ defineProps<{ isOpen: boolean }>();
 <template>
   <transition name="fade">
     <div class="menu-wrapper" v-if="isOpen">
-      <div class="menu"  >
-        <the-navigation class="menu__navigation" ></the-navigation>
+      <div class="menu">
+        <the-navigation class="menu__navigation"></the-navigation>
         <base-button class="menu__button">Записаться</base-button>
       </div>
       <div class="overlay"></div>

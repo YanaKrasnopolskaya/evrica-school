@@ -1,13 +1,18 @@
 <script setup lang="ts">
-
-import {navLinks} from "~/features/navigation";
+import { navLinks } from '~/features/navigation';
 </script>
 
 <template>
   <nav class="nav">
     <ul class="nav__list">
       <li v-for="(link, index) in navLinks" :key="index">
-        <NuxtLink v-if="!link.isAnchor" :to="link.to" class="nav__link" exact-active-class="nav__link--exact-active">{{ link.label }}</NuxtLink>
+        <NuxtLink
+          v-if="!link.isAnchor"
+          :to="link.to"
+          class="nav__link"
+          exact-active-class="nav__link--exact-active"
+          >{{ link.label }}</NuxtLink
+        >
         <a v-else :href="link.to" class="nav__link">{{ link.label }}</a>
       </li>
     </ul>
@@ -51,7 +56,7 @@ import {navLinks} from "~/features/navigation";
     left: -2px;
   }
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0;
     left: 50%;

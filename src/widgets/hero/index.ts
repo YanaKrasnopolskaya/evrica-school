@@ -1,1 +1,1 @@
-export {  default as TheHero  } from './ui/TheHero.vue'
+export { default as TheHero } from './ui/TheHero.vue';

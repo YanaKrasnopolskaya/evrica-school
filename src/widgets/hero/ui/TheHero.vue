@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {BaseButton} from "~/shared/button";
+import { BaseButton } from '~/shared/button';
 
 interface HeroInfo {
   pageName?: string;
@@ -20,8 +20,18 @@ defineProps<HeroInfo>();
       <div class="info">
         <slot name="page-name">{{ pageName }}</slot>
         <picture>
-          <source srcset="/images/desktop/dt-hero-logo.webp" type="image/webp" media="(min-width: 768px)"/>
-          <img class="info__img" src="/images/mobile/mb-hero-logo.png" alt="Логотип Эврика" width="303" height="106" />
+          <source
+            srcset="/images/desktop/dt-hero-logo.webp"
+            type="image/webp"
+            media="(min-width: 768px)"
+          />
+          <img
+            class="info__img"
+            src="/images/mobile/mb-hero-logo.png"
+            alt="Логотип Эврика"
+            width="303"
+            height="106"
+          />
         </picture>
         <span class="info__text" v-html="title"></span>
       </div>
@@ -32,7 +42,7 @@ defineProps<HeroInfo>();
     </div>
     <div class="hero__img-wrapper">
       <picture>
-        <source :srcset="imgDesktop" type="" media="(min-width: 768px)"/>
+        <source :srcset="imgDesktop" type="" media="(min-width: 768px)" />
         <img class="hero__img" :src="imgMobile" :alt="imgAlt" width="367" height="245" />
       </picture>
     </div>
@@ -61,7 +71,7 @@ defineProps<HeroInfo>();
     height: 418px;
     flex-shrink: 0;
     border-radius: 24px;
-    background: $red-light url("/images/mobile/mb-hero-bg-img.png") no-repeat;
+    background: $red-light url('/images/mobile/mb-hero-bg-img.png') no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -70,13 +80,13 @@ defineProps<HeroInfo>();
       padding: 60px;
       height: 580px;
       gap: 67px;
-      background-image: url("/images/desktop/dt-hero-bg-img.png");
+      background-image: url('/images/desktop/dt-hero-bg-img.png');
     }
     @include desktop {
       width: auto;
       flex: 1 1 50%;
       padding: 80px 60px;
-      background-image: url("/images/desktop/dt-hero-bg-img.png");
+      background-image: url('/images/desktop/dt-hero-bg-img.png');
     }
   }
   &__img-wrapper {
@@ -142,7 +152,6 @@ defineProps<HeroInfo>();
       object-position: -110px 0;
     }
     @include desktop {
-
     }
   }
 }
