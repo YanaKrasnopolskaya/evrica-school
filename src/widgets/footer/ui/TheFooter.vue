@@ -6,7 +6,7 @@ import {BaseButton} from "~/shared/button";
   <div class="container">
     <footer class="footer">
       <picture>
-        <source srcset="/images/tb-footer-logo.webp" type="image/webp" media="(min-width: 768px)"/>
+        <source srcset="/images/tablet/tb-footer-logo.webp" type="image/webp" media="(min-width: 768px)"/>
         <source srcset="/images/desktop/dt-footer-logo.webp" type="image/webp" media="(min-width: 1024px)"/>
         <img class="footer__logo" src="/images/mobile/mb-footer-logo.png" alt="Логотив Эврика" width="290" height="144">
       </picture>
@@ -43,7 +43,7 @@ import {BaseButton} from "~/shared/button";
         <div class="developer">
           <div class="developer__info">
             <span>Разработано командой</span>
-            <img src="/images/saasoft-logo.png" alt="Логотип Saasoft" width="154" height="56">
+
           </div>
           <base-button class="developer__btn">
             <span>Узнать подробнее</span>
