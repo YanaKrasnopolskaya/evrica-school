@@ -18,8 +18,7 @@ const toggleMenu = () => {
         <div class="header__logo-wrapper">
           <NuxtLink to="/">
             <picture>
-              <source srcset="/images/tablet/tb-header-logo.webp" type="image/webp" media="(min-width: 768px)"/>
-              <source srcset="/images/desktop/dt-header-logo.webp" type="image/webp" media="(min-width: 1024px)"/>
+              <source srcset="/images/desktop/dt-header-logo.webp" type="image/webp" media="(min-width: 768px)"/>
               <img class="header__logo" src="/images/mobile/mb-header-logo.png" alt="Логотип Эврика" width="101" height="36"/>
             </picture>
           </NuxtLink>

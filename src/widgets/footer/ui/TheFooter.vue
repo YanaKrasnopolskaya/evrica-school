@@ -7,8 +7,7 @@ import {BaseButton} from "~/shared/button";
     <div class="footer__about">
       <div class="footer__logo">
         <picture>
-          <source srcset="/images/tablet/tb-footer-logo.webp" type="image/webp" media="(min-width: 768px)"/>
-          <source srcset="/images/desktop/dt-footer-logo.webp" type="image/webp" media="(min-width: 1024px)"/>
+          <source srcset="/images/desktop/dt-footer-logo.webp" type="image/webp" media="(min-width: 768px)"/>
           <img src="/images/mobile/mb-footer-logo.png" alt="Логотив Эврика" width="290" height="144">
         </picture>
       </div>

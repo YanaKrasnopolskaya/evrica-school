@@ -24,7 +24,7 @@ withDefaults(defineProps<Button>(), {
   padding: 29px 48px;
   border-radius: 16px;
   background: $red-main;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 1.375rem;
   line-height: 120%;
   letter-spacing: 0;
