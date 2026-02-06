@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { TheHero } from '~/widgets/hero';
+import {HelpChildSection} from "~/widgets/home-page/help-child";
 </script>
 <template>
   <h1 class="visually-hidden">Главная страница школа "Эврика"</h1>
@@ -12,6 +13,7 @@ import { TheHero } from '~/widgets/hero';
       img-desktop="/images/desktop/1-image.webp"
       img-alt="Центр развития картинка"
     />
+    <help-child-section />
   </div>
 </template>
 

@@ -57,13 +57,16 @@ defineProps<HeroInfo>();
   justify-content: center;
   gap: 20px;
   margin-top: 24px;
+  margin-bottom: 60px;
   @include tablet {
     gap: 24px;
     margin-top: 34px;
+    margin-bottom: 100px;
   }
   @include desktop {
     flex-direction: row;
     margin-top: 28px;
+    margin-bottom: 120px;
   }
   &__info-wrapper {
     padding: 32px 20px 28px;
