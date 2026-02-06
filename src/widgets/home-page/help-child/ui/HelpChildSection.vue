@@ -97,7 +97,7 @@ import {InfoCardWithIcon} from "~/entities/cards";
 }
 .card {
   width: 100%;
-  height: 185px;
+  height: 187px;
   border-color: $azure-light;
   @include tablet {
     width: 429px;
