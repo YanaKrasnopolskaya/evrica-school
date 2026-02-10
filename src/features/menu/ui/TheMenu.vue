@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { TheNavigation } from '~/features/navigation';
-import { BaseButton } from '~/shared/button';
+import { BaseButton } from '~/shared/ui/button';
 
 defineProps<{ isOpen: boolean }>();
 </script>
@@ -8,11 +8,11 @@ defineProps<{ isOpen: boolean }>();
 <template>
   <transition name="fade">
     <div class="menu-wrapper" v-if="isOpen">
+      <div class="overlay"></div>
       <div class="menu">
         <the-navigation class="menu__navigation"></the-navigation>
         <base-button class="menu__button">Записаться</base-button>
       </div>
-      <div class="overlay"></div>
     </div>
   </transition>
 </template>
@@ -59,17 +59,16 @@ defineProps<{ isOpen: boolean }>();
   }
 }
 .overlay {
-  position: fixed;
+  position: absolute;
   z-index: 1;
-  top: 56px;
-  height: 100vh;
+  inset: 0;
   background: rgba(62, 39, 39, 0.2);
   backdrop-filter: blur(10px);
 }
 // анимация появления меню
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
 }
 .fade-enter-from,
 .fade-leave-to {

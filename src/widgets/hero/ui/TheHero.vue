@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { BaseButton } from '~/shared/button';
+import { BaseButton } from '~/shared/ui/button';
 
 interface HeroInfo {
   pageName?: string;

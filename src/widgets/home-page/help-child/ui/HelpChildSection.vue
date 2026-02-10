@@ -1,41 +1,50 @@
 <script setup lang="ts">
-import {InfoCardWithIcon} from "~/entities/cards";
+import { InfoCardWithIcon } from '~/entities/cards';
 </script>
 
 <template>
   <section class="help">
-    <h2 class="help__title">Помогаем ребёнку<br> понимать мир и&nbsp;себя</h2>
+    <h2 class="help__title">
+      Помогаем ребёнку<br />
+      понимать мир и&nbsp;себя
+    </h2>
     <div class="help__cards-wrapper">
-      <info-card-with-icon class="card"
-                           icon="icon_globe"
-                           description="Уже более 7&nbsp;лет мы&nbsp;рядом с&nbsp;детьми разных
-                           возрастов&nbsp;&mdash; от&nbsp;первых шагов в&nbsp;детском саду до&nbsp;выпускных экзаменов">
+      <info-card-with-icon
+        class="card"
+        icon="icon_globe"
+        description="Уже более 7&nbsp;лет мы&nbsp;рядом с&nbsp;детьми разных
+                           возрастов&nbsp;&mdash; от&nbsp;первых шагов в&nbsp;детском саду до&nbsp;выпускных экзаменов"
+      >
         <template #title><h3 class="card__title">7&nbsp;лет вместе</h3></template>
       </info-card-with-icon>
-      <info-card-with-icon class="card card--green-light"
-                           icon="icon_film"
-                           description="Современное пространство с&nbsp;оборудованием для&nbsp;творчества, науки и&nbsp;технологий">
+      <info-card-with-icon
+        class="card card--green-light"
+        icon="icon_film"
+        description="Современное пространство с&nbsp;оборудованием для&nbsp;творчества, науки и&nbsp;технологий"
+      >
       </info-card-with-icon>
       <div class="help__img-wrapper">
         <picture>
           <source
-              srcset="/images/desktop/2-image.webp"
-              type="image/webp"
-              media="(min-width: 768px)"
+            srcset="/images/desktop/2-image.webp"
+            type="image/webp"
+            media="(min-width: 768px)"
           />
           <img
-              class="help__img"
-              src="/images/mobile/2-image.png"
-              alt="Логотип Эврика"
-              width="408"
-              height="272"
+            class="help__img"
+            src="/images/mobile/2-image.png"
+            alt="Логотип Эврика"
+            width="408"
+            height="272"
           />
         </picture>
       </div>
-      <info-card-with-icon class="card card--orange-light"
-                           icon="icon_robot"
-                           description="Мы&nbsp;учим через диалог&nbsp;&mdash;
-                           вместе ищем ответы и&nbsp;помогаем ребёнку чувствовать уверенность и&nbsp;самостоятельность.">
+      <info-card-with-icon
+        class="card card--orange-light"
+        icon="icon_robot"
+        description="Мы&nbsp;учим через диалог&nbsp;&mdash;
+                           вместе ищем ответы и&nbsp;помогаем ребёнку чувствовать уверенность и&nbsp;самостоятельность."
+      >
         <template #title><h3 class="card__title">Поддерживаем</h3></template>
       </info-card-with-icon>
     </div>

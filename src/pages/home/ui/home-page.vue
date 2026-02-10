@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { TheHero } from '~/widgets/hero';
-import {HelpChildSection} from "~/widgets/home-page/help-child";
-import {DevelopmentPathSection} from "~/widgets/home-page/development-path";
+import { HelpChildSection } from '~/widgets/home-page/help-child';
+import { DevelopmentPathSection } from '~/widgets/home-page/development-path';
 </script>
 <template>
   <h1 class="visually-hidden">Главная страница школа "Эврика"</h1>

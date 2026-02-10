@@ -11,7 +11,7 @@ defineProps<Card>();
   <div class="card">
     <div class="card__icon-wrapper">
       <svg class="card__icon" aria-hidden="true">
-        <use :href="`/sprite/sprite.svg#${ icon }`"></use>
+        <use :href="`/sprite/sprite.svg#${icon}`"></use>
       </svg>
     </div>
     <slot name="title"></slot>

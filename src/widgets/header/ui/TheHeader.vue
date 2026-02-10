@@ -1,12 +1,23 @@
 <script setup lang="ts">
 import { TheNavigation } from '~/features/navigation';
-import { BaseButton } from '~/shared/button';
+import { BaseButton } from '~/shared/ui/button';
 import { TheMenu } from '~/features/menu';
+import ThePopup from '~/widgets/popup/ui/ThePopup.vue';
 
-const isOpenMenu = ref(false);
+const isOpenMenu = ref<boolean>(false);
+const isOpenPopup = ref<boolean>(false);
 
-const toggleMenu = () => {
-  isOpenMenu.value = !isOpenMenu.value;
+// скрол страницы блокируется при открытых меню и попап
+watch([isOpenMenu, isOpenPopup], ([menu, popup]) => {
+  const locked = menu || popup;
+  document.body.classList.toggle('no-scroll', locked);
+});
+
+const toggleMenu = () => (isOpenMenu.value = !isOpenMenu.value);
+
+const openPopup = () => {
+  isOpenPopup.value = true;
+  isOpenMenu.value = false;
 };
 </script>
 
@@ -34,7 +45,7 @@ const toggleMenu = () => {
         </div>
         <the-navigation class="header__nav"></the-navigation>
         <div class="header__button-wrapper">
-          <base-button class="header__btn">Записаться</base-button>
+          <base-button class="header__btn" @click="openPopup">Записаться</base-button>
           <button v-if="!isOpenMenu" class="header__menu-btn" aria-label="Меню" @click="toggleMenu">
             <svg class="header__menu-icon" width="21" height="15" aria-hidden="true">
               <use href="/sprite/sprite.svg#icon_menu"></use>
@@ -51,7 +62,12 @@ const toggleMenu = () => {
             </svg>
           </button>
         </div>
-        <the-menu class="header__menu" :is-open="isOpenMenu" @close="isOpenMenu = false"></the-menu>
+        <Teleport to="body">
+          <the-menu class="header__menu" :is-open="isOpenMenu" @close="isOpenMenu = false" />
+        </Teleport>
+        <Teleport to="body">
+          <the-popup :is-open="isOpenPopup" @close="isOpenPopup = false" />
+        </Teleport>
       </header>
     </div>
   </div>
@@ -141,6 +157,7 @@ const toggleMenu = () => {
   &__menu-close-icon {
     width: 14px;
     height: 14px;
+    color: $red-main;
   }
   &__menu {
     @include desktop {

@@ -2,15 +2,20 @@
 interface Button {
   variant?: 'primary' | 'secondary';
   type?: 'button' | 'submit' | 'reset';
-  state?: 'default' | 'active' | 'error' | 'success';
+  state?: 'default' | 'success' | 'invalid' | 'server-error';
+  disabled?: boolean;
 }
 
 withDefaults(defineProps<Button>(), {
   variant: 'primary',
   type: 'button',
-  disabled: false,
   state: 'default',
+  disabled: false,
 });
+
+defineEmits<{
+  (e: 'update:state', value: Button['state']): void;
+}>();
 </script>
 
 <template>
@@ -18,9 +23,10 @@ withDefaults(defineProps<Button>(), {
     class="btn"
     :class="[
       `btn__${variant}`,
-      { 'btn__is-error': state === 'error', 'btn__is-success': state === 'success' },
+      { 'btn__is-invalid': state === 'invalid', 'btn__is-success': state === 'success' },
     ]"
     :type="type"
+    :disabled="disabled"
   >
     <slot />
   </button>
@@ -45,10 +51,11 @@ withDefaults(defineProps<Button>(), {
   &:active {
     background: rgba(247, 14, 52, 1);
   }
-  &__is-success {
+  &:disabled {
     background: rgba(237, 61, 90, 0.7);
+    cursor: not-allowed;
   }
-  &__is-error {
+  &__is-invalid {
     background: rgba(241, 0, 4, 1);
   }
 }

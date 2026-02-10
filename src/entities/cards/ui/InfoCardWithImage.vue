@@ -13,22 +13,21 @@ defineProps<Card>();
 
 <template>
   <div class="card">
-    <div class="card__img-wrapper">
-      <picture>
-        <source
-            :srcset="imageDesktop"
-            type="image/webp"
-            media="(min-width: 768px)"
-        />
-        <img
+    <div class="card__images">
+      <slot name="image-left"></slot>
+      <div class="card__img-wrapper">
+        <picture>
+          <source :srcset="imageDesktop" type="image/webp" media="(min-width: 768px)" />
+          <img
             class="card__img"
             :src="imageMobile"
             :alt="imageAlt"
             :width="imageWidth"
             :height="imageHeight"
-        />
-      </picture>
-      <slot name="more-images"></slot>
+          />
+        </picture>
+      </div>
+      <slot name="image-right"></slot>
     </div>
     <div class="card__info">
       <slot name="card-feature"></slot>
