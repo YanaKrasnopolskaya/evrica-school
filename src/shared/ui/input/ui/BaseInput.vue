@@ -55,6 +55,7 @@ const localValue = computed({
   border: 2px solid $red-light;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 8px;
   background: $white;
   border-radius: 16px;

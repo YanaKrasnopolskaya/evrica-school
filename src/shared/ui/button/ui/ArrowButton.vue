@@ -1,5 +1,5 @@
 <template>
-  <button class="arrow-btn" type="button">
+  <button class="arrow-btn" type="button" aria-label="Перейти на страницу">
     <svg class="arrow-btn__icon" width="18" height="15" aria-hidden="true">
       <use href="/sprite/sprite.svg#icon_arrow"></use>
     </svg>

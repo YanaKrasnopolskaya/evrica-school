@@ -9,6 +9,23 @@ defineEmits<{ (e: 'close'): void }>();
   <transition name="fade">
     <div class="popup-wrapper" v-if="isOpen">
       <div class="popup">
+        <picture>
+          <source
+              srcset="/images/desktop/dt-hero-bg-img.webp"
+              type="image/webp"
+              media="(min-width: 768px)"
+          />
+          <img
+              class="popup__bg"
+              src="/images/mobile/mb-hero-bg-img.png"
+              alt="Логотип Эврика"
+              width="343"
+              height="418"
+              fetchpriority="high"
+              decoding="async"
+              loading="eager"
+          />
+        </picture>
         <button class="popup__close-btn" @click="$emit('close')">
           <svg class="popup__icon-close" width="12" height="12" aria-hidden="true">
             <use href="/sprite/sprite.svg#icon_close"></use>
@@ -16,7 +33,7 @@ defineEmits<{ (e: 'close'): void }>();
         </button>
         <div class="popup__content">
           <span class="popup__content-text">Начните открывать мир вместе с&nbsp;нами!</span>
-          <base-form />
+          <base-form class="popup__form"/>
         </div>
       </div>
     </div>
@@ -27,7 +44,7 @@ defineEmits<{ (e: 'close'): void }>();
 .popup-wrapper {
   inset: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   background: rgba(62, 39, 39, 0.2);
   backdrop-filter: blur(10px);
 }
@@ -38,9 +55,26 @@ defineEmits<{ (e: 'close'): void }>();
   z-index: 2;
   margin: 0 16px;
   border-radius: 24px;
-  background: $red-light url('/images/desktop/dt-hero-bg-img.png') no-repeat bottom left;
+  background: $red-light;
   background-size: 230%;
   padding: 80px 16px;
+  overflow: hidden;
+  @include tablet {
+    height: 743px;
+    margin: 0 48px;
+    padding: 120px 114.5px;
+  }
+  @include desktop {
+    width: 672px;
+    margin: 0 auto;
+  }
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    z-index: 0;
+  }
   &__icon-close {
     position: absolute;
     top: 22px;
@@ -48,6 +82,8 @@ defineEmits<{ (e: 'close'): void }>();
     color: $brown;
   }
   &__content {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,7 +103,20 @@ defineEmits<{ (e: 'close'): void }>();
     @include tablet {
       font-size: 4rem;
       line-height: 90%;
+      margin-left: -49px;
+      margin-right: -49px;
     }
+  }
+  &__form {
+    :deep(.form__check) {
+      opacity: 46%;
+    }
+    @include tablet {
+      :deep(.form__btn) {
+        padding: 29px;
+      }
+    }
+
   }
 }
 // анимация появления попапа

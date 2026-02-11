@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { BaseButton } from '~/shared/ui/button';
+import ThePopup from "../../popup/ui/ThePopup.vue";
+import {useScrollLock} from "~/features/use-scroll";
 
 interface HeroInfo {
   pageName?: string;
@@ -12,11 +14,31 @@ interface HeroInfo {
 }
 
 defineProps<HeroInfo>();
+
+const isOpenPopup = ref(false);
+useScrollLock([isOpenPopup]);
 </script>
 
 <template>
   <section class="hero">
     <div class="hero__info-wrapper">
+      <picture class="hero__picture">
+        <source
+            srcset="/images/desktop/dt-hero-bg-img.webp"
+            type="image/webp"
+            media="(min-width: 768px)"
+        />
+        <img
+            class="hero__info-wrapper-bg"
+            src="/images/mobile/mb-hero-bg-img.png"
+            alt="Логотип Эврика"
+            width="343"
+            height="418"
+            fetchpriority="high"
+            decoding="async"
+            loading="eager"
+        />
+      </picture>
       <div class="info">
         <slot name="page-name">{{ pageName }}</slot>
         <picture>
@@ -31,22 +53,29 @@ defineProps<HeroInfo>();
             alt="Логотип Эврика"
             width="303"
             height="106"
+            fetchpriority="high"
+            decoding="async"
+            loading="eager"
           />
         </picture>
         <span class="info__text" v-html="title"></span>
       </div>
       <div class="hero__button-wrapper">
-        <base-button class="hero__btn">{{ textBtn }}</base-button>
+        <base-button class="hero__btn" @click="isOpenPopup = true">{{ textBtn }}</base-button>
         <span class="hero__additional-text">{{ additionalText }}</span>
       </div>
     </div>
     <div class="hero__img-wrapper">
       <picture>
         <source :srcset="imgDesktop" type="" media="(min-width: 768px)" />
-        <img class="hero__img" :src="imgMobile" :alt="imgAlt" width="367" height="245" />
+        <!-- decoding="async" - распаковка картинки не блочит рендер, loading="eager" - загружать сразу, fetchpriority="high" - приоритет загрузки -->
+        <img class="hero__img" :src="imgMobile" :alt="imgAlt" width="367" height="245" loading="eager" decoding="async" fetchpriority="high"/>
       </picture>
     </div>
   </section>
+  <Teleport to="body">
+    <the-popup :is-open="isOpenPopup" @close="isOpenPopup = false" />
+  </Teleport>
 </template>
 
 <style scoped lang="scss">
@@ -69,12 +98,13 @@ defineProps<HeroInfo>();
     margin-bottom: 120px;
   }
   &__info-wrapper {
+    position: relative;
     padding: 32px 20px 28px;
     width: 100%;
     height: 418px;
     flex-shrink: 0;
     border-radius: 24px;
-    background: $red-light url('/images/mobile/mb-hero-bg-img.png') no-repeat;
+    background: $red-light;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -83,14 +113,26 @@ defineProps<HeroInfo>();
       padding: 60px;
       height: 580px;
       gap: 67px;
-      background-image: url('/images/desktop/dt-hero-bg-img.png');
     }
     @include desktop {
       width: auto;
       flex: 1 1 50%;
       padding: 80px 60px;
-      background-image: url('/images/desktop/dt-hero-bg-img.png');
     }
+  }
+  &__picture {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  &__info-wrapper-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    z-index: 0;
+    object-position: center;
+    object-fit: cover;
   }
   &__img-wrapper {
     height: 203px;
@@ -105,6 +147,8 @@ defineProps<HeroInfo>();
     }
   }
   &__button-wrapper {
+    position: relative;
+    z-index: 1;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -159,12 +203,15 @@ defineProps<HeroInfo>();
   }
 }
 .info {
+  position: relative;
+  z-index: 1;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   gap: 16px;
+  margin-bottom: auto;
   @include tablet {
     gap: 32px;
   }

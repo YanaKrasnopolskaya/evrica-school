@@ -32,7 +32,7 @@ import { ArrowButton } from '~/shared/ui/button';
               <svg class="card__img-icon" width="43" height="64" aria-hidden="true">
                 <use href="/sprite/sprite.svg#icon_paper-clip"></use>
               </svg>
-              <img class="card__img" src="/images/desktop/6-image.webp" alt="лагерь изображение" />
+              <img class="card__img" src="/images/desktop/6-image.webp" alt="лагерь изображение" loading="lazy"/>
             </div>
           </template>
           <template #image-right v-if="card.page === CardRole.Camp">
@@ -49,6 +49,7 @@ import { ArrowButton } from '~/shared/ui/button';
                 class="card__img card__img--right"
                 src="/images/desktop/8-image.webp"
                 alt="лагерь изображение"
+                loading="lazy"
               />
             </div>
           </template>

@@ -24,6 +24,7 @@ defineProps<Card>();
             :alt="imageAlt"
             :width="imageWidth"
             :height="imageHeight"
+            loading="lazy"
           />
         </picture>
       </div>

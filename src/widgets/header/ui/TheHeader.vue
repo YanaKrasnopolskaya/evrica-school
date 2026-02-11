@@ -3,15 +3,12 @@ import { TheNavigation } from '~/features/navigation';
 import { BaseButton } from '~/shared/ui/button';
 import { TheMenu } from '~/features/menu';
 import ThePopup from '~/widgets/popup/ui/ThePopup.vue';
+import {useScrollLock} from "~/features/use-scroll";
 
-const isOpenMenu = ref<boolean>(false);
-const isOpenPopup = ref<boolean>(false);
+const isOpenMenu = ref(false);
+const isOpenPopup = ref(false);
 
-// скрол страницы блокируется при открытых меню и попап
-watch([isOpenMenu, isOpenPopup], ([menu, popup]) => {
-  const locked = menu || popup;
-  document.body.classList.toggle('no-scroll', locked);
-});
+useScrollLock([isOpenPopup, isOpenMenu]);
 
 const toggleMenu = () => (isOpenMenu.value = !isOpenMenu.value);
 

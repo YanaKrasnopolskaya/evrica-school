@@ -18,6 +18,9 @@ export default defineNuxtConfig({
   },
   css: ['~/app/assets/styles/main.scss'],
   vite: {
+      build: {
+          cssCodeSplit: false // объеденяем все стили в один css, чтобы запрос был один
+      },
     css: {
       preprocessorOptions: {
         scss: {

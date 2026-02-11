@@ -32,7 +32,7 @@ import { InfoCardWithIcon } from '~/entities/cards';
           />
           <img
             class="help__img"
-            src="/images/mobile/2-image.png"
+            src="/images/mobile/2-image.webp"
             alt="Логотип Эврика"
             width="408"
             height="272"

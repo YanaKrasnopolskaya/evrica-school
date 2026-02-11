@@ -1,0 +1,1 @@
+export { useScrollLock } from './module/useScrollLock';

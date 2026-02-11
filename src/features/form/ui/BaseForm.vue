@@ -16,6 +16,9 @@ const buttonState = ref<'default' | 'success' | 'invalid' | 'server-error'>('def
 
 // меняем текст кнопки в зависимости от состояния
 const buttonText = computed(() => {
+  if (loading.value) {
+    return 'Отправка...';
+  }
   switch (buttonState.value) {
     case 'success':
       return 'Заявка отправлена';
@@ -104,7 +107,7 @@ const handleValidate = async <K extends keyof FormData>(key: K, value: FormData[
       :error-text="errors.age"
       @blur="handleValidate('age', age)"
     />
-    <base-check v-model="consent" :invalid="!!errors.consent" :required="true">
+    <base-check class="form__check" v-model="consent" :invalid="!!errors.consent" :required="true">
       <template #check-text>
         <span class="form__consent-text">Я согласен с политикой конфиденциальности</span>
       </template>
@@ -113,7 +116,7 @@ const handleValidate = async <K extends keyof FormData>(key: K, value: FormData[
       class="form__btn"
       v-model:state="buttonState"
       type="submit"
-      :disabled="isBtnDisabled"
+      :disabled="isBtnDisabled || loading"
       >{{ buttonText }}</base-button
     >
   </form>
@@ -136,7 +139,7 @@ const handleValidate = async <K extends keyof FormData>(key: K, value: FormData[
   }
   &__btn {
     padding: 14px;
-    margin-top: 12px;
+    margin-top: 6px;
     font-size: 1.25rem;
   }
 }

@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { TheNavigation } from '~/features/navigation';
 import { BaseButton } from '~/shared/ui/button';
+import ThePopup from "../../../widgets/popup/ui/ThePopup.vue";
+
+const isOpenPopup = ref(false);
 
 defineProps<{ isOpen: boolean }>();
 </script>
@@ -11,10 +14,13 @@ defineProps<{ isOpen: boolean }>();
       <div class="overlay"></div>
       <div class="menu">
         <the-navigation class="menu__navigation"></the-navigation>
-        <base-button class="menu__button">Записаться</base-button>
+        <base-button class="menu__button" @click="isOpenPopup = true;">Записаться</base-button>
       </div>
     </div>
   </transition>
+  <Teleport to="body">
+    <the-popup :is-open="isOpenPopup" @close="isOpenPopup = false" />
+  </Teleport>
 </template>
 
 <style scoped lang="scss">

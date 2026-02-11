@@ -10,7 +10,7 @@ import { DevelopmentPathSection } from '~/widgets/home-page/development-path';
       title="Центр развития<br> и&nbsp;открытий"
       text-btn="Записаться на пробный день"
       additional-text="Для детей от&nbsp;2&nbsp;до&nbsp;16&nbsp;лет"
-      img-mobile="/images/mobile/1-image.png"
+      img-mobile="/images/mobile/1-image.webp"
       img-desktop="/images/desktop/1-image.webp"
       img-alt="Центр развития картинка"
     />
