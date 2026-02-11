@@ -1,0 +1,65 @@
+export const ABOUT_CENTER_DATA = [
+    {
+        id: 1,
+        title: "Помогаем осваивать полезные привычки:",
+        icon: "icon_monitor",
+        iconWidth: "83",
+        iconHeight: "77",
+        description: "Здоровый образ жизни, планирование, внимание к&nbsp;себе и&nbsp;личную эффективность",
+        background: "violet-light",
+        imageDesktop: "/images/desktop/9-image.webp",
+        imageMobile: "/images/mobile/9-image.webp",
+        imageAlt: "Полезные привычки изображение",
+        imageWidth: "174",
+        imageHeight: "174",
+        type: 'animation'
+    },
+    {
+        id: 2,
+        icon: "icon_palette-light",
+        iconWidth: "85",
+        iconHeight: "90",
+        description: "Посещаем театры и&nbsp;выставки, ставим спектакли, проводим концерты, спортивные игры и&nbsp;семейные праздники",
+        background: "blue",
+        imageDesktop: "/images/desktop/10-image.webp",
+        imageMobile: "/images/mobile/10-image.webp",
+        imageAlt: "Культурные мероприятия изображение",
+        imageWidth: "262",
+        imageHeight: "303",
+        type: 'animation'
+    },
+    {
+        id: 3,
+        description: "Через совместные проекты развивается креативность и&nbsp;общение",
+        background: "orange",
+        imageDesktop: "/images/desktop/11-image.webp",
+        imageMobile: "/images/mobile/11-image.png",
+        imageAlt: "Проекты изображение",
+        imageWidth: "442",
+        imageHeight: "228",
+        type: 'info'
+    },
+    {
+        id: 4,
+        title: 'Там, где слышат и&nbsp;понимают',
+        description: "Мы&nbsp;строим общение на&nbsp;уважении и&nbsp;поддержке&nbsp;&mdash; так рождается спокойствие и&nbsp;желание <span class='card__word'>учиться</span>",
+        background: "green",
+        imageDesktop: "/images/desktop/12-image.webp",
+        imageMobile: "/images/mobile/12-image.png",
+        imageAlt: "Общение изображение",
+        imageWidth: "174",
+        imageHeight: "174",
+        type: 'animation'
+    },
+    {
+        id: 5,
+        title: 'Всё это&nbsp;&mdash; часть образовательного процесса',
+        background: "red",
+        imageDesktop: "/images/desktop/13-image.webp",
+        imageMobile: "/images/mobile/13-image.png",
+        imageAlt: "Образовательный процесс изображение",
+        imageWidth: "238",
+        imageHeight: "238",
+        type: 'animation'
+    },
+]

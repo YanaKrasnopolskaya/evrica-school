@@ -1,0 +1,1 @@
+export { default as BoxForAnimationSection } from './ui/BoxForAnimationSection.vue';

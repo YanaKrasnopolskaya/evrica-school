@@ -2,6 +2,8 @@
 import { TheHero } from '~/widgets/hero';
 import { HelpChildSection } from '~/widgets/home-page/help-child';
 import { DevelopmentPathSection } from '~/widgets/home-page/development-path';
+import {BoxForAnimationSection} from "~/widgets/box-for-animation-section";
+import {AboutCenterSection} from "~/widgets/home-page/about-center";
 </script>
 <template>
   <h1 class="visually-hidden">Главная страница школа "Эврика"</h1>
@@ -16,6 +18,11 @@ import { DevelopmentPathSection } from '~/widgets/home-page/development-path';
     />
     <help-child-section />
     <development-path-section />
+    <box-for-animation-section>
+      <template #content>
+        <about-center-section />
+      </template>
+    </box-for-animation-section>
   </div>
 </template>
 
