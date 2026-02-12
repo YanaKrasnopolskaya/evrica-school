@@ -48,22 +48,31 @@ const localValue = computed({
 
 <style scoped lang="scss">
 .input-wrapper {
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
 .input {
+  width: 100%;
   border: 2px solid $red-light;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 8px;
   background: $white;
-  border-radius: 16px;
+  border-radius: 14px;
   padding: 15.5px 16px;
   transition: border-color 0.25s ease;
+  height: 50px;
+  @include tablet {
+    padding: 17px 16px;
+    height: 58px;
+    border-radius: 16px;
+  }
   &__field {
     font-weight: 300;
     font-size: 1.25rem;
+    font-family: inherit;
     line-height: 120%;
     letter-spacing: 0;
     vertical-align: middle;
@@ -76,6 +85,9 @@ const localValue = computed({
       letter-spacing: 0;
       vertical-align: middle;
       color: rgba(62, 39, 39, 0.5);
+      @include tablet {
+        font-size: 1.25rem;
+      }
     }
     &:focus-visible {
       outline: none;

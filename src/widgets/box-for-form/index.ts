@@ -1,0 +1,1 @@
+export { default as BoxForForm } from './ui/BoxForForm.vue';

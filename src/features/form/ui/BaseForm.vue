@@ -127,8 +127,9 @@ const handleValidate = async <K extends keyof FormData>(key: K, value: FormData[
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 12px;
-  background: inherit;
+  background: transparent;
   &__consent-text {
     font-weight: 500;
     font-size: 0.875rem;
@@ -136,11 +137,25 @@ const handleValidate = async <K extends keyof FormData>(key: K, value: FormData[
     letter-spacing: 0;
     vertical-align: middle;
     color: $brown;
+    opacity: 46%;
+    @include tablet {
+      font-size: 1rem;
+    }
   }
   &__btn {
+    width: 280px;
     padding: 14px;
-    margin-top: 6px;
+    margin-top: 8px;
     font-size: 1.25rem;
+    @include tablet {
+      width: 100%;
+      height: 84px;
+      margin-top: 14px;
+      font-size: 1.375rem;
+    }
+    @include desktop {
+      margin-top: 12px;
+    }
   }
 }
 </style>

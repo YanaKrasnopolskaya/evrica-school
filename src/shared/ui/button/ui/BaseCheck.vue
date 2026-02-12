@@ -34,6 +34,7 @@ const toggleCheck = () => {
 
 <style scoped lang="scss">
 .checkbox {
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -48,6 +49,7 @@ const toggleCheck = () => {
   &__box {
     width: 16px;
     height: 16px;
+    border-radius: 4px;
     border: 1px solid $brown;
     display: flex;
     justify-content: center;

@@ -5,6 +5,7 @@ import { DevelopmentPathSection } from '~/widgets/home-page/development-path';
 import {BoxForAnimationSection} from "~/widgets/box-for-animation-section";
 import {AboutCenterSection} from "~/widgets/home-page/about-center";
 import {DirectionsSection} from "~/widgets/home-page/directions";
+import {BoxForForm} from "~/widgets/box-for-form";
 </script>
 <template>
   <h1 class="visually-hidden">Главная страница школа "Эврика"</h1>
@@ -25,6 +26,9 @@ import {DirectionsSection} from "~/widgets/home-page/directions";
       </template>
     </box-for-animation-section>
     <directions-section />
+    <box-for-form title="Первый шаг&nbsp;к&nbsp;открытиям вместе с&nbsp;нами"
+                  description="Запишитесь на&nbsp;экскурсию по&nbsp;центру в&nbsp;формате дружеской встречи с&nbsp;директором"
+    />
   </div>
 </template>
 
