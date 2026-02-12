@@ -45,6 +45,7 @@ export default defineNuxtConfig({
           as: 'font',
           type: 'font/woff2',
           crossorigin: '',
+            'data-font-display': 'swap'
         },
         {
           rel: 'preload',
@@ -52,6 +53,7 @@ export default defineNuxtConfig({
           as: 'font',
           type: 'font/woff',
           crossorigin: '',
+            'data-font-display': 'swap'
         },
         {
           rel: 'preload',
@@ -59,12 +61,21 @@ export default defineNuxtConfig({
           as: 'font',
           type: 'font/ttf',
           crossorigin: '',
+            'data-font-display': 'swap'
         },
+          { // предзагрузка для разработки
+              rel: 'preconnect',
+              href: 'http://localhost:3000'
+          },
       ],
     },
   },
   nitro: {
-    compressPublicAssets: true, // включает сжатие для html, css, js и т.д.
+      compressPublicAssets: { // сжатие.
+          brotli: true,
+          gzip: true,
+      },
+
     routeRules: {
       // Использовать кеширование на стороне браузера на год
       '/fonts/**': { headers: { 'cache-control': 'public, max-age=31536000' } },
@@ -72,5 +83,6 @@ export default defineNuxtConfig({
       '/images/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
       '/sprite/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
     },
+      minify: true, // Минификация HTML
   },
 });

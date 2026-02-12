@@ -125,6 +125,12 @@ import {ABOUT_CENTER_DATA} from "~/widgets/home-page/about-center";
   @include tablet {
     height: 573px;
   }
+  @include desktop {
+    width: 664px;
+    height: 573px;
+    position: relative;
+    top: 114px;
+  }
   :deep(.card__icon) {
     z-index: 2;
     bottom: 25px;
@@ -136,6 +142,9 @@ import {ABOUT_CENTER_DATA} from "~/widgets/home-page/about-center";
       bottom: -30px;
       right: 0;
       rotate: -12.2deg;
+    }
+    @include desktop {
+      right: -34px;
     }
   }
   :deep(.card__info) {
@@ -150,12 +159,19 @@ import {ABOUT_CENTER_DATA} from "~/widgets/home-page/about-center";
       padding: 40px;
       width: 568px;
     }
+    @include desktop {
+      width: 508px;
+    }
   }
   :deep(.card__image) {
     border-radius: 20px;
     @include tablet {
       width: 434px;
       height: 406px;
+    }
+    @include desktop {
+      width: 396px;
+      height: 407px;
     }
   }
 }
@@ -166,6 +182,12 @@ import {ABOUT_CENTER_DATA} from "~/widgets/home-page/about-center";
     width: 424px;
     height: 428px;
     margin-top: -6px;
+  }
+  @include desktop {
+    margin-left: auto;
+    position: relative;
+    right: 25px;
+    top: -190px;
   }
   :deep(.card__img-wrapper) {
     width: 327px;
@@ -180,6 +202,13 @@ import {ABOUT_CENTER_DATA} from "~/widgets/home-page/about-center";
   height: 354px;
   @include tablet {
     height: 408px;
+  }
+  @include desktop {
+    width: 746px;
+    height: 502px;
+    position: relative;
+    top: -288px;
+    left: 16px;
   }
   :deep(.card__info) {
     @include tablet {
@@ -211,6 +240,9 @@ import {ABOUT_CENTER_DATA} from "~/widgets/home-page/about-center";
       rotate: 0deg;
       right: 0;
     }
+    @include desktop {
+      bottom: 96px;
+    }
   }
 }
 .about-center__card--item-5 {
@@ -219,9 +251,28 @@ import {ABOUT_CENTER_DATA} from "~/widgets/home-page/about-center";
   @include tablet {
     height: 365px;
   }
+  @include desktop {
+    width: 1020px;
+    height: 424px;
+    position: relative;
+    top: -424px;
+    left: 110px;
+  }
   :deep(.card__info) {
+    position: relative;
+    top: -110px;
     @include tablet {
+      top: -4px;
       width: 402px;
+    }
+    @include desktop {
+      top: 0;
+      width: 696px;
+    }
+  }
+  :deep(.card__info-title) {
+    @include desktop {
+      width: 550px;
     }
   }
   :deep(.card__image) {
@@ -232,6 +283,11 @@ import {ABOUT_CENTER_DATA} from "~/widgets/home-page/about-center";
     @include tablet {
       width: 365px;
       height: 365px;
+    }
+    @include desktop {
+      width: 424px;
+      height: 424px;
+      bottom: -8px;
     }
   }
 }

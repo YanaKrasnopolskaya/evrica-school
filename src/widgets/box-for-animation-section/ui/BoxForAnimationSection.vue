@@ -24,14 +24,18 @@ defineProps({
   align-items: flex-start;
   gap: 40px;
   padding-top: 144px;
+  margin-bottom: 60px;
   @include tablet {
     padding-top: 276px;
     margin-left: -20px;
     margin-right: -20px;
+    margin-bottom: 96px;
   }
   @include desktop {
     margin-left: -60px;
     margin-right: -60px;
+    height: 2172px;
+    margin-bottom: 124px;
   }
   &__logo {
     position: sticky;
