@@ -43,8 +43,21 @@ import {TeachersSection} from "~/widgets/home-page/teachers";
 
 <style scoped lang="scss">
 .form__bottom {
+  @include tablet {
+    gap: 48px;
+  }
+  @include desktop {
+    gap: 54px;
+    margin-bottom: 118px;
+  }
   :deep(.box__info) {
-    gap: 40px;
+    gap: 20px;
+    @include tablet {
+      gap: 40px;
+    }
+    @include desktop {
+      gap: 60px;
+    }
   }
 }
 </style>

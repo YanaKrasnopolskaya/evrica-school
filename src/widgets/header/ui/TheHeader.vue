@@ -80,7 +80,7 @@ const openPopup = () => {
   }
 }
 .header {
-  padding: 10px 0 8px;
+  padding: 4px 0 8px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -88,7 +88,7 @@ const openPopup = () => {
     padding: 10px 0 8px;
   }
   @include desktop {
-    padding: 7px 60px;
+    padding: 10px 60px 8px;
   }
   &__logo-wrapper {
     @include desktop {

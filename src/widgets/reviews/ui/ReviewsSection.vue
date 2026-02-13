@@ -32,7 +32,7 @@ import {REVIEWS_DATA} from "~/widgets/reviews";
   display: flex;
   flex-direction: column;
   gap: 40px;
-  margin-bottom: 64px;
+  margin-bottom: 66px;
   @include tablet {
     gap: 60px;
     margin-bottom: 110px;

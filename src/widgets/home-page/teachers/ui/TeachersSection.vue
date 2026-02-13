@@ -54,7 +54,7 @@ const { container: cards, showLeftBtn, scrollLeft, scrollRight } = useHorizontal
     margin-bottom: 40px;
   }
   @include desktop {
-    margin-bottom: 120px;
+    margin-bottom: 62px;
   }
   &__title {
     text-align: left;

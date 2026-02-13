@@ -78,7 +78,7 @@ import { ArrowButton } from '~/shared/ui/button';
     margin-bottom: 100px;
   }
   @include desktop {
-    margin-bottom: 120px;
+    margin-bottom: 118px;
   }
   &__cards-wrapper {
     display: grid;

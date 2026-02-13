@@ -27,8 +27,8 @@ defineProps({
   margin-bottom: 60px;
   @include tablet {
     padding-top: 276px;
-    margin-left: -20px;
-    margin-right: -20px;
+    margin-left: -18px;
+    margin-right: -18px;
     margin-bottom: 96px;
   }
   @include desktop {
