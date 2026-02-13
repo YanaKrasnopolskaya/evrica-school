@@ -51,7 +51,7 @@ const { container: cards, showLeftBtn, scrollLeft, scrollRight } = useHorizontal
   gap: 40px;
   @include tablet {
     gap: 60px;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
   }
   @include desktop {
     margin-bottom: 120px;

@@ -35,7 +35,16 @@ import {TeachersSection} from "~/widgets/home-page/teachers";
     <features-section />
     <reviews-section />
     <teachers-section />
+    <box-for-form class="form__bottom" title="Начните открывать мир&nbsp;вместе&nbsp;с&nbsp;нами!"
+                  description="Опишите пожелания&nbsp;&mdash; и&nbsp;мы&nbsp;предложим идеальную программу"
+    />
   </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.form__bottom {
+  :deep(.box__info) {
+    gap: 40px;
+  }
+}
+</style>
