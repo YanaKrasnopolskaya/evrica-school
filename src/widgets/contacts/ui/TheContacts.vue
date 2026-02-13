@@ -22,6 +22,7 @@ import {TgButton} from "~/shared/ui/button";
               width="100%"
               height="300"
               allowfullscreen
+              title="Карта с адресом учебного центра Эврика"
           >
           </iframe>
         </div>

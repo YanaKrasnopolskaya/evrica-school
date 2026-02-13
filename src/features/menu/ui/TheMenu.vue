@@ -6,21 +6,24 @@ import ThePopup from "../../../widgets/popup/ui/ThePopup.vue";
 const isOpenPopup = ref(false);
 
 defineProps<{ isOpen: boolean }>();
+defineEmits(['close']);
 </script>
 
 <template>
-  <transition name="fade">
-    <div class="menu-wrapper" v-if="isOpen">
-      <div class="overlay"></div>
-      <div class="menu">
-        <the-navigation class="menu__navigation"></the-navigation>
-        <base-button class="menu__button" @click="isOpenPopup = true;">Записаться</base-button>
+  <section>
+    <transition name="fade">
+      <div class="menu-wrapper" v-if="isOpen">
+        <div class="overlay"></div>
+        <div class="menu">
+          <the-navigation class="menu__navigation"></the-navigation>
+          <base-button class="menu__button" @click="isOpenPopup = true;">Записаться</base-button>
+        </div>
       </div>
-    </div>
-  </transition>
-  <Teleport to="body">
-    <the-popup :is-open="isOpenPopup" @close="isOpenPopup = false" />
-  </Teleport>
+    </transition>
+    <Teleport to="body">
+      <the-popup :is-open="isOpenPopup" @close="isOpenPopup = false" />
+    </Teleport>
+  </section>
 </template>
 
 <style scoped lang="scss">

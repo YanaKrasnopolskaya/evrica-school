@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {BaseForm} from "~/features/form";
+import BaseForm from "~/features/form/ui/BaseForm.vue";
 
 defineProps({
   title: String,
