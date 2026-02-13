@@ -4,7 +4,7 @@ import {DIRECTION_DATA} from "~/widgets/home-page/directions";
 </script>
 
 <template>
-  <div class="directions">
+  <section class="directions">
     <h2 class="directions__title">Направления, расширяющие кругозор и&nbsp;навыки</h2>
     <div class="directions__cards-wrapper">
       <info-card-with-list v-for="(card, index) in DIRECTION_DATA"
@@ -19,7 +19,7 @@ import {DIRECTION_DATA} from "~/widgets/home-page/directions";
                            :page="card.page"
       />
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped lang="scss">

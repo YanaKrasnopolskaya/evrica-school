@@ -1,5 +1,9 @@
+<script setup lang="ts">
+const emit = defineEmits(['click']);
+</script>
+
 <template>
-  <button class="arrow-btn" type="button" aria-label="Перейти на страницу">
+  <button class="arrow-btn" type="button" aria-label="Перейти на страницу" @click="emit('click')">
     <svg class="arrow-btn__icon" width="18" height="15" aria-hidden="true">
       <use href="/sprite/sprite.svg#icon_arrow"></use>
     </svg>
@@ -16,6 +20,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   &:active {
     border-color: rgba(255, 255, 255, 0.7);
     .arrow-btn__icon {
@@ -29,4 +34,4 @@
   }
 }
 </style>
-<script setup lang="ts"></script>
+

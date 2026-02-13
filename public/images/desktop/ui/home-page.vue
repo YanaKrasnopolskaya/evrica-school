@@ -1,11 +1,14 @@
 <script setup lang="ts">
-import { TheHero } from '~/widgets/hero';
-import { HelpChildSection } from '~/widgets/home-page/help-child';
-import { DevelopmentPathSection } from '~/widgets/home-page/development-path';
+import {TheHero} from "~/widgets/hero";
+import {HelpChildSection} from "~/widgets/home-page/help-child";
+import {DevelopmentPathSection} from "~/widgets/home-page/development-path";
 import {BoxForAnimationSection} from "~/widgets/box-for-animation-section";
 import {AboutCenterSection} from "~/widgets/home-page/about-center";
 import {DirectionsSection} from "~/widgets/home-page/directions";
 import {BoxForForm} from "~/widgets/box-for-form";
+import {FeaturesSection} from "~/widgets/home-page/features";
+import {ReviewsSection} from "~/widgets/reviews";
+import {TeachersSection} from "~/widgets/home-page/teachers";
 </script>
 <template>
   <h1 class="visually-hidden">Главная страница школа "Эврика"</h1>
@@ -29,6 +32,9 @@ import {BoxForForm} from "~/widgets/box-for-form";
     <box-for-form title="Первый шаг&nbsp;к&nbsp;открытиям вместе с&nbsp;нами"
                   description="Запишитесь на&nbsp;экскурсию по&nbsp;центру в&nbsp;формате дружеской встречи с&nbsp;директором"
     />
+    <features-section />
+    <reviews-section />
+    <teachers-section />
   </div>
 </template>
 
