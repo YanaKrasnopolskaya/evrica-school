@@ -15,7 +15,7 @@ defineProps<Card>();
       <img class="card__avatar" :src="avatar" alt="аватар" width="80" height="80" />
       <div class="card__rating-data">
         <span class="card__avatar-name">{{ avatarName }}</span>
-        <img class="card__rating" src="/images/mobile/stars.webp" alt="рейтинг">
+        <img class="card__rating" src="/images/mobile/stars.webp" alt="рейтинг" width="120" height="24" />
         <span class="card__rating-date">{{ ratingDate }}</span>
       </div>
     </div>

@@ -4,6 +4,7 @@ import ThePopup from "../../popup/ui/ThePopup.vue";
 import {useScrollLock} from "~/features/use-scroll";
 
 interface HeroInfo {
+  page: string;
   pageName?: string;
   title: string;
   textBtn: string;
@@ -20,27 +21,10 @@ useScrollLock([isOpenPopup]);
 </script>
 
 <template>
-  <section class="hero">
+  <section class="hero" :class="[ `hero--${ page }` ]">
     <div class="hero__info-wrapper">
-      <picture class="hero__picture">
-        <source
-            srcset="/images/desktop/dt-hero-bg-img.webp"
-            type="image/webp"
-            media="(min-width: 768px)"
-        />
-        <img
-            class="hero__info-wrapper-bg"
-            src="/images/mobile/mb-hero-bg-img.png"
-            alt="Логотип Эврика"
-            width="343"
-            height="418"
-            fetchpriority="high"
-            decoding="async"
-            loading="eager"
-        />
-      </picture>
       <div class="info">
-        <slot name="page-name">{{ pageName }}</slot>
+        <span v-if="pageName" class="hero__page-name">{{ pageName }}</span>
         <picture>
           <source
             srcset="/images/desktop/dt-hero-logo.webp"
@@ -68,8 +52,8 @@ useScrollLock([isOpenPopup]);
     <div class="hero__img-wrapper">
       <picture>
         <source :srcset="imgDesktop" type="" media="(min-width: 768px)" />
-        <!-- decoding="async" - распаковка картинки не блочит рендер, loading="eager" - загружать сразу, fetchpriority="high" - приоритет загрузки -->
-        <img class="hero__img" :src="imgMobile" :alt="imgAlt" width="367" height="245" loading="eager" decoding="async" fetchpriority="high"/>
+        <!-- decoding="async" - распаковка картинки не блочит рендер, fetchpriority="high" - приоритет загрузки -->
+        <img class="hero__img" :src="imgMobile" :alt="imgAlt" width="367" height="245" decoding="async" fetchpriority="high"/>
       </picture>
     </div>
   </section>
@@ -104,10 +88,11 @@ useScrollLock([isOpenPopup]);
     height: 418px;
     flex-shrink: 0;
     border-radius: 24px;
-    background: $red-light;
+    background: $red-light url("/images/desktop/dt-hero-bg-img.webp") center center no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     @include tablet {
       padding: 60px;
@@ -120,21 +105,21 @@ useScrollLock([isOpenPopup]);
       padding: 80px 60px;
     }
   }
-  &__picture {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-  }
-  &__info-wrapper-bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    inset: 0;
-    z-index: 0;
-    object-position: center;
-    object-fit: cover;
+  &__page-name {
+    padding: 8px 16px;
+    border-radius: 32px;
+    background: $blue-light;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    color: $blue;
+    @include tablet {
+      font-size: 1.375rem;
+    }
   }
   &__img-wrapper {
+    width: 100%;
     height: 203px;
     border-radius: 24px;
     overflow: hidden;
@@ -155,6 +140,7 @@ useScrollLock([isOpenPopup]);
     justify-content: flex-start;
     align-items: flex-start;
     gap: 4px;
+    margin-top: auto;
     @include tablet {
       gap: 12px;
     }
@@ -190,16 +176,8 @@ useScrollLock([isOpenPopup]);
     }
   }
   &__img {
-    width: 367px;
-    height: 245px;
-    object-position: -20px -20px;
-    @include tablet {
-      width: 870px;
-      height: 580px;
-      object-position: -110px 0;
-    }
-    @include desktop {
-    }
+    width: 100%;
+    height: 100%;
   }
 }
 .info {
@@ -211,7 +189,6 @@ useScrollLock([isOpenPopup]);
   align-items: flex-start;
   justify-content: flex-start;
   gap: 16px;
-  margin-bottom: auto;
   @include tablet {
     gap: 32px;
   }
@@ -230,6 +207,33 @@ useScrollLock([isOpenPopup]);
     color: $red-main;
     @include tablet {
       font-size: 1.375rem;
+    }
+  }
+}
+.hero--home{
+  .hero__img {
+    transform: scale(1.05);
+    object-position: -10px center;
+  }
+  @include tablet {
+    .hero__img {
+      transform: scale(1);
+      object-position: 80% center;
+    }
+  }
+  @include desktop {
+    .hero__img {
+      object-position: 50% center;
+    }
+  }
+}
+.hero--kids-club {
+  @include desktop {
+    .hero__info-wrapper {
+      gap: 19px;
+    }
+    .hero__img {
+      object-position: -10px center;
     }
   }
 }

@@ -1,0 +1,1 @@
+export { default as KidsClubPage } from './ui/KidsClubPage.vue';

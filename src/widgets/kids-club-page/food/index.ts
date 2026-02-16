@@ -1,0 +1,1 @@
+export { default as FoodSection } from './ui/FoodSection.vue';

@@ -8,13 +8,13 @@ defineProps({
 </script>
 
 <template>
-  <div class="box">
+  <section class="box">
     <div class="box__info">
       <h2 class="box__info-title" v-html="title"></h2>
       <p class="box__info-description" v-html="description"></p>
     </div>
     <base-form class="box__form" />
-  </div>
+  </section>
 </template>
 
 <style scoped lang="scss">
@@ -54,6 +54,7 @@ defineProps({
       padding-left: 6px;
     }
     @include desktop {
+      flex: 0 0 510px;
       padding-left: 0;
     }
   }

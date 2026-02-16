@@ -36,6 +36,7 @@ import { InfoCardWithIcon } from '~/entities/cards';
             alt="Логотип Эврика"
             width="408"
             height="272"
+            loading="lazy"
           />
         </picture>
       </div>
@@ -94,14 +95,8 @@ import { InfoCardWithIcon } from '~/entities/cards';
     }
   }
   &__img {
-    width: 408px;
-    height: 272px;
-    @include tablet {
-      object-position: -60px center;
-    }
-    @include tablet {
-      object-position: center;
-    }
+    width: 100%;
+    height: 100%;
   }
 }
 .card {

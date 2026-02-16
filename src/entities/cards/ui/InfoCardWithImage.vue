@@ -5,7 +5,7 @@ interface Card {
   imageAlt: string;
   imageWidth: string;
   imageHeight: string;
-  cardDescription: string;
+  cardDescription?: string;
 }
 
 defineProps<Card>();

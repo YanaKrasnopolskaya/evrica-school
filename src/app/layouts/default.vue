@@ -2,6 +2,7 @@
 import { TheHeader } from '~/widgets/header';
 import { TheFooter } from '~/widgets/footer';
 import {TheContacts} from "~/widgets/contacts";
+
 </script>
 
 <template>

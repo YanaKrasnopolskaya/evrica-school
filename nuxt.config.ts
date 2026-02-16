@@ -71,10 +71,7 @@ export default defineNuxtConfig({
     },
   },
   nitro: {
-      compressPublicAssets: { // сжатие.
-          brotli: true,
-          gzip: true,
-      },
+      compressPublicAssets: true,
 
     routeRules: {
       // Использовать кеширование на стороне браузера на год
