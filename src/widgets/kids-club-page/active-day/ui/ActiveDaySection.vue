@@ -6,7 +6,7 @@ import {ACTIVE_DAY_DATA} from "~/widgets/kids-club-page/active-day";
 <template>
   <div class="active-day" >
     <h2 class="active-day__title">День, полный активности и&nbsp;открытий</h2>
-      <template v-for="(card, index) in ACTIVE_DAY_DATA">
+      <template v-for="card in ACTIVE_DAY_DATA">
         <animation-card v-if="card.type === 'animation'"
                         class="active-day__card"
                         :class="[`card--${card.id}`]"

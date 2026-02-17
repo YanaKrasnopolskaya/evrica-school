@@ -11,6 +11,7 @@ interface Card {
   imageAlt: string;
   imageWidth: string;
   imageHeight: string;
+  additionalContent?: string;
 }
 
 defineProps<Card>();
@@ -24,6 +25,7 @@ defineProps<Card>();
     <div class="card__info" :class="[ `card__info--${background}` ]">
       <h3 v-if="title" class="card__info-title" v-html="title"></h3>
       <p v-if="description" class="card__info-description" v-html="description"></p>
+      <slot name="additional-content"></slot>
     </div>
     <picture class="card__picture">
       <source
@@ -40,7 +42,6 @@ defineProps<Card>();
           loading="lazy"
       />
     </picture>
-    <slot name="additional-content"></slot>
   </div>
 </template>
 
@@ -55,6 +56,7 @@ defineProps<Card>();
     position: absolute;
   }
   &__info {
+    position: relative;
     padding: 24px 20px;
     width: 100%;
     display: flex;

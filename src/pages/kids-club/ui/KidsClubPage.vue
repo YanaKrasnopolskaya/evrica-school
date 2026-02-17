@@ -35,10 +35,10 @@ import {TariffCard} from "~/entities/cards";
                   title="Хотите&nbsp;увидеть <br> всё сами?"
                   description="Приходите на&nbsp;дружескую экскурсию: познакомимся, покажем занятия и&nbsp;атмосферу"
     />
-    <age-groups-section />
-    <food-section />
-    <rhythm-section />
-    <timetable-section />
+    <age-groups-section/>
+    <food-section/>
+    <rhythm-section/>
+    <timetable-section/>
     <tariffs-section title="Гибкие форматы и&nbsp;тарифы">
       <template #cards>
         <tariff-card v-for="card in TARIFFS_FOR_KIDS_CLUB_DATA"
@@ -69,13 +69,16 @@ import {TariffCard} from "~/entities/cards";
     }
   }
 }
+
 .card {
   width: 100%;
+
   :deep(.card__btn) {
     @include tablet {
       width: 360px;
     }
   }
+
   @include tablet {
     width: 424px;
     height: 408px;
@@ -88,6 +91,7 @@ import {TariffCard} from "~/entities/cards";
     }
   }
 }
+
 .card--3 {
   @include tablet {
     :deep(.card__description) {

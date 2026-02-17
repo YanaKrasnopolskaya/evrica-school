@@ -23,6 +23,21 @@ useScrollLock([isOpenPopup]);
 <template>
   <section class="hero" :class="[ `hero--${ page }` ]">
     <div class="hero__info-wrapper">
+      <picture class="hero__picture">
+        <source
+            srcset="/images/desktop/dt-hero-bg-img.webp"
+            type="image/webp"
+            media="(min-width: 768px)"
+        />
+        <img
+            class="hero__bg-img"
+            src="/images/desktop/dt-hero-bg-img.webp"
+            alt="Логотип Эврика"
+            width="649"
+            height="580"
+            fetchpriority="high"
+        />
+      </picture>
       <div class="info">
         <span v-if="pageName" class="hero__page-name">{{ pageName }}</span>
         <picture>
@@ -83,12 +98,13 @@ useScrollLock([isOpenPopup]);
   }
   &__info-wrapper {
     position: relative;
+    overflow: hidden;
     padding: 32px 20px 28px;
     width: 100%;
     height: 418px;
     flex-shrink: 0;
     border-radius: 24px;
-    background: $red-light url("/images/desktop/dt-hero-bg-img.webp") center center no-repeat;
+    background: $red-light;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -103,6 +119,22 @@ useScrollLock([isOpenPopup]);
       width: auto;
       flex: 1 1 50%;
       padding: 80px 60px;
+    }
+  }
+  &__picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &__bg-img {
+    transform: scale(1.1);
+    object-position: 68% center;
+    width: 100%;
+    height: 100%;
+    @include tablet {
+      transform: scale(1);
     }
   }
   &__page-name {
@@ -234,6 +266,28 @@ useScrollLock([isOpenPopup]);
     }
     .hero__img {
       object-position: -10px center;
+    }
+  }
+}
+.hero--school {
+  .hero__page-name {
+    background: $azure-extra-light;
+    color: $azure;
+  }
+  @include tablet {
+    .info__text {
+      width: 440px;
+    }
+    .hero__img {
+      object-position: center top;
+    }
+  }
+  @include desktop {
+    .hero__info-wrapper {
+      gap: 19px;
+    }
+    .hero__img {
+      object-position: center center;
     }
   }
 }

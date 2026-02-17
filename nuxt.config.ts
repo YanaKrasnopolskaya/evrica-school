@@ -72,7 +72,6 @@ export default defineNuxtConfig({
   },
   nitro: {
       compressPublicAssets: true,
-
     routeRules: {
       // Использовать кеширование на стороне браузера на год
       '/fonts/**': { headers: { 'cache-control': 'public, max-age=31536000' } },

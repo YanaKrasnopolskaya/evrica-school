@@ -5,7 +5,9 @@ interface Card {
   imageAlt: string;
   imageWidth: string;
   imageHeight: string;
+  cardTitle?: string;
   cardDescription?: string;
+  additionalContent?: string;
 }
 
 defineProps<Card>();
@@ -19,12 +21,12 @@ defineProps<Card>();
         <picture>
           <source :srcset="imageDesktop" type="image/webp" media="(min-width: 768px)" />
           <img
-            class="card__img"
-            :src="imageMobile"
-            :alt="imageAlt"
-            :width="imageWidth"
-            :height="imageHeight"
-            loading="lazy"
+              class="card__img"
+              :src="imageMobile"
+              :alt="imageAlt"
+              :width="imageWidth"
+              :height="imageHeight"
+              loading="lazy"
           />
         </picture>
       </div>
@@ -32,7 +34,7 @@ defineProps<Card>();
     </div>
     <div class="card__info">
       <slot name="card-feature"></slot>
-      <slot name="card-title"></slot>
+      <h3 v-if="cardTitle" class="card__title" v-html="cardTitle"></h3>
       <p class="card__description" v-html="cardDescription"></p>
     </div>
   </div>
@@ -74,6 +76,17 @@ defineProps<Card>();
     justify-content: center;
     align-items: center;
     gap: 12px;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 1.75rem;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: $white;
+    @include tablet {
+      font-size: 2.5rem;
+    }
   }
   &__description {
     font-weight: 500;
