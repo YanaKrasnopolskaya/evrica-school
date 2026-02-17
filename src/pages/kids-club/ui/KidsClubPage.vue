@@ -6,6 +6,9 @@ import {BoxForForm} from "~/widgets/box-for-form";
 import {AgeGroupsSection} from "~/widgets/kids-club-page/age-groups";
 import {FoodSection} from "~/widgets/kids-club-page/food";
 import {RhythmSection} from "~/widgets/kids-club-page/rhythm";
+import {TimetableSection} from "~/widgets/kids-club-page/timetable";
+import {TARIFFS_FOR_KIDS_CLUB_DATA, TariffsSection} from "~/widgets/tariffs";
+import {TariffCard} from "~/entities/cards";
 </script>
 
 <template>
@@ -35,6 +38,20 @@ import {RhythmSection} from "~/widgets/kids-club-page/rhythm";
     <age-groups-section />
     <food-section />
     <rhythm-section />
+    <timetable-section />
+    <tariffs-section title="Гибкие форматы и&nbsp;тарифы">
+      <template #cards>
+        <tariff-card v-for="card in TARIFFS_FOR_KIDS_CLUB_DATA"
+                     class="card"
+                     :class="[`card--${card.id}`]"
+                     :title="card.title"
+                     :button-text="card.buttonText"
+                     :description="card.description"
+                     :price="card.price"
+                     :color="card.color"
+        />
+      </template>
+    </tariffs-section>
   </div>
 </template>
 
@@ -49,6 +66,32 @@ import {RhythmSection} from "~/widgets/kids-club-page/rhythm";
     margin-bottom: 120px;
     :deep(.box__info-description) {
       width: 380px;
+    }
+  }
+}
+.card {
+  width: 100%;
+  :deep(.card__btn) {
+    @include tablet {
+      width: 360px;
+    }
+  }
+  @include tablet {
+    width: 424px;
+    height: 408px;
+    :deep(.card__description) {
+      margin-bottom: 10px;
+      width: 295px;
+    }
+    :deep(.card__price) {
+      margin-bottom: 8px;
+    }
+  }
+}
+.card--3 {
+  @include tablet {
+    :deep(.card__description) {
+      margin-bottom: 34px;
     }
   }
 }

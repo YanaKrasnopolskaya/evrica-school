@@ -4,3 +4,6 @@ export { default as AnimationCard } from './ui/AnimationCard.vue';
 export { default as InfoCardWithList } from './ui/InfoCardWithList.vue';
 export { default as SmallCardWithFeatures } from './ui/SmallCardWithFeatures.vue';
 export { default as ReviewsCard } from './ui/ReviewsCard.vue';
+export { default as InfoCardWithBgAndIcon } from './ui/InfoCardWithBgAndIcon.vue';
+export { default as TimeTableCard } from './ui/TimeTableCard.vue';
+export { default as TariffCard } from './ui/TariffCard.vue';

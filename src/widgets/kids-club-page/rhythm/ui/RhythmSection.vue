@@ -34,10 +34,10 @@ import {RHYTHM_DATA} from "~/widgets/kids-club-page/rhythm";
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  margin-bottom: 4px;
+  margin-bottom: 44px;
   @include tablet {
     gap: 85px;
-    margin-bottom: 100px;
+    margin-bottom: 104px;
   }
   @include desktop {
     gap: 86px;
