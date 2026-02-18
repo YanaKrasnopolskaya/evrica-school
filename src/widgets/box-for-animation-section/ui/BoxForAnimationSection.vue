@@ -25,6 +25,7 @@ defineProps({
   gap: 40px;
   padding-top: 144px;
   margin-bottom: 60px;
+  overflow: hidden;
   @include tablet {
     padding-top: 276px;
     margin-left: -18px;

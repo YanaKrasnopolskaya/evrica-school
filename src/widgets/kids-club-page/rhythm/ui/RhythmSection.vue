@@ -19,10 +19,10 @@ import {RHYTHM_DATA} from "~/widgets/kids-club-page/rhythm";
                                   :content="false"
       />
       <div class="rhythm__img-wrapper rhythm__img-wrapper--top">
-        <img class="rhythm__img" src="/images/mobile/24-image.png" alt="малыши изображение" loading="lazy" width="328" height="384">
+        <img class="rhythm__img" src="/images/mobile/24-image.webp" alt="малыши изображение" loading="lazy" width="328" height="384">
       </div>
       <div class="rhythm__img-wrapper rhythm__img-wrapper--bottom">
-        <img class="rhythm__img" src="/images/mobile/25-image.png" alt="ребята изображение" loading="lazy" width="328" height="384">
+        <img class="rhythm__img" src="/images/mobile/25-image.webp" alt="ребята изображение" loading="lazy" width="328" height="384">
       </div>
     </div>
   </section>

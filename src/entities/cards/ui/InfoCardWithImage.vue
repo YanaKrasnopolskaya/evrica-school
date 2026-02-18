@@ -87,6 +87,9 @@ defineProps<Card>();
     @include tablet {
       font-size: 2.5rem;
     }
+    @include desktop {
+      font-size: 2.5rem;
+    }
   }
   &__description {
     font-weight: 500;

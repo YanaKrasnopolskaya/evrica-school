@@ -30,7 +30,7 @@ export const DEVELOPMENT_PATH_DATA: DevPathData[] = [
     page: CardRole.KidsClub,
     image: {
       mobile: {
-        src: '/images/mobile/3-image.png',
+        src: '/images/mobile/3-image.webp',
         alt: 'Детский клуб',
         width: '393',
         height: '274',
@@ -49,7 +49,7 @@ export const DEVELOPMENT_PATH_DATA: DevPathData[] = [
     page: CardRole.School,
     image: {
       mobile: {
-        src: '/images/mobile/4-image.png',
+        src: '/images/mobile/4-image.webp',
         alt: 'Школа',
         width: '393',
         height: '274',
@@ -68,7 +68,7 @@ export const DEVELOPMENT_PATH_DATA: DevPathData[] = [
     page: CardRole.AfterSchool,
     image: {
       mobile: {
-        src: '/images/mobile/5-image.png',
+        src: '/images/mobile/5-image.webp',
         alt: 'Продлёнка',
         width: '393',
         height: '274',
@@ -88,7 +88,7 @@ export const DEVELOPMENT_PATH_DATA: DevPathData[] = [
     page: CardRole.Camp,
     image: {
       mobile: {
-        src: '/images/mobile/7-image.png',
+        src: '/images/mobile/7-image.webp',
         alt: 'Лагерь',
         width: '329',
         height: '274',

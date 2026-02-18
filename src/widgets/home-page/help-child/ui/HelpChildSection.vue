@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { InfoCardWithIcon } from '~/entities/cards';
+import {HELP_CHILD_DATA} from "~/widgets/home-page/help-child";
 </script>
 
 <template>
@@ -9,20 +10,16 @@ import { InfoCardWithIcon } from '~/entities/cards';
       понимать мир и&nbsp;себя
     </h2>
     <div class="help__cards-wrapper">
-      <info-card-with-icon
-        class="card"
-        icon="icon_globe"
-        description="Уже более 7&nbsp;лет мы&nbsp;рядом с&nbsp;детьми разных
-                           возрастов&nbsp;&mdash; от&nbsp;первых шагов в&nbsp;детском саду до&nbsp;выпускных экзаменов"
-      >
-        <template #title><h3 class="card__title">7&nbsp;лет вместе</h3></template>
-      </info-card-with-icon>
-      <info-card-with-icon
-        class="card card--green-light"
-        icon="icon_film"
-        description="Современное пространство с&nbsp;оборудованием для&nbsp;творчества, науки и&nbsp;технологий"
-      >
-      </info-card-with-icon>
+      <info-card-with-icon v-for="card in HELP_CHILD_DATA"
+                           class="card"
+                           :class="[`card--${card.id}`]"
+                           :icon="card.icon"
+                           :icon-width="card.iconWidth"
+                           :icon-height="card.iconHeight"
+                           :description="card.description"
+                           :color="card.color"
+                           :title="card.title"
+      />
       <div class="help__img-wrapper">
         <picture>
           <source
@@ -32,7 +29,7 @@ import { InfoCardWithIcon } from '~/entities/cards';
           />
           <img
             class="help__img"
-            src="/images/mobile/2-image.png"
+            src="/images/mobile/2-image.webp"
             alt="Логотип Эврика"
             width="408"
             height="272"
@@ -40,14 +37,6 @@ import { InfoCardWithIcon } from '~/entities/cards';
           />
         </picture>
       </div>
-      <info-card-with-icon
-        class="card card--orange-light"
-        icon="icon_robot"
-        description="Мы&nbsp;учим через диалог&nbsp;&mdash;
-                           вместе ищем ответы и&nbsp;помогаем ребёнку чувствовать уверенность и&nbsp;самостоятельность."
-      >
-        <template #title><h3 class="card__title">Поддерживаем</h3></template>
-      </info-card-with-icon>
     </div>
   </section>
 </template>
@@ -68,17 +57,17 @@ import { InfoCardWithIcon } from '~/entities/cards';
     margin-bottom: 120px;
   }
   &__cards-wrapper {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 19px;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    gap: 20px;
     @include tablet {
-      flex-direction: row;
+      grid-template-columns: 429px 279px;
+      grid-template-rows: repeat(2, auto);
       gap: 24px 20px;
     }
     @include desktop {
+      grid-template-columns: 424px 200px 200px 424px;
+      grid-template-rows: repeat(1, auto);
       gap: 24px;
     }
   }
@@ -87,11 +76,16 @@ import { InfoCardWithIcon } from '~/entities/cards';
     border-radius: 16px;
     width: 100%;
     height: 272px;
+    grid-row: 3;
     @include tablet {
       width: 279px;
+      grid-row: 2;
+      grid-column: 1;
     }
     @include desktop {
       width: 200px;
+      grid-row: 1;
+      grid-column: 3;
     }
   }
   &__img {
@@ -101,47 +95,45 @@ import { InfoCardWithIcon } from '~/entities/cards';
 }
 .card {
   width: 100%;
-  height: 187px;
-  border-color: $azure-light;
   @include tablet {
-    width: 429px;
     height: 272px;
   }
-  @include desktop {
-    width: 424px;
-  }
-  &__title {
-    font-weight: 500;
-    font-size: 1.75rem;
-    line-height: 100%;
-    letter-spacing: -0.02em;
-    color: $azure;
-    @include tablet {
-      font-size: 2.5rem;
+}
+.card--1 {
+  @include tablet {
+    grid-row: 1;
+    grid-column: 1;
+    :deep(.card__icon) {
+      width: 115px;
+      height: 142px;
     }
   }
 }
-.card--green-light {
-  border-color: $green-light;
-  height: 137px;
-  :deep(.card__icon-wrapper) {
-    padding: 0;
-  }
+.card--2 {
   @include tablet {
-    width: 279px;
-    height: 272px;
-  }
-  @include desktop {
-    width: 200px;
+    grid-row: 1;
+    grid-column: 2;
+    :deep(.card__icon) {
+      width: 148px;
+      height: 112px;
+    }
   }
 }
-.card--orange-light {
-  border-color: $orange-light;
-  @include desktop {
-    padding-right: 20px;
+.card--3 {
+  @include tablet {
+    grid-row: 2;
+    grid-column: 2;
+    width: 429px;
+    transform: translateX(-35%);
+    :deep(.card__icon) {
+      width: 119px;
+      height: 140px;
+    }
   }
-  .card__title {
-    color: $orange;
+  @include desktop {
+    grid-row: 1;
+    grid-column: 4;
+    transform: translateX(0);
   }
 }
 </style>

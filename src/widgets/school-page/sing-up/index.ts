@@ -1,0 +1,1 @@
+export { default as SignUpSection } from './ui/SignUpSection.vue';

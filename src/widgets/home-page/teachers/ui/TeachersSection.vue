@@ -122,7 +122,7 @@ const { container: cards, showLeftBtn, scrollLeft, scrollRight } = useHorizontal
     align-items: flex-start;
     gap: 10px;
     @include tablet {
-      transform: translateY(-156px);
+      transform: translateY(-155px);
     }
     @include desktop {
       transform: translateY(-154px);
@@ -184,6 +184,14 @@ const { container: cards, showLeftBtn, scrollLeft, scrollRight } = useHorizontal
   }
   &__btn--right {
     right: 0;
+  }
+}
+.card--1 .card__info,
+.card--2 .card__info,
+.card--3 .card__info {
+  transform: translateY(-120px);
+  @include tablet {
+    transform: translateY(-155px);
   }
 }
 .card--6 .card__info {

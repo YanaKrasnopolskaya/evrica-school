@@ -21,7 +21,7 @@ import {TariffCard} from "~/entities/cards";
         title="Место, где ребёнку спокойно<br> и интересно"
         text-btn="Записаться на пробный день"
         additional-text="Для детей от 2 до 7 лет"
-        img-mobile="/images/mobile/mb-hero-img-kids-club.png"
+        img-mobile="/images/mobile/17-image.webp"
         img-desktop="/images/desktop/dt-hero-img-kids-club.webp"
         img-alt="Центр развития картинка"
     >

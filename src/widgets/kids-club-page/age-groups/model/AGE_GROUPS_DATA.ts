@@ -7,7 +7,7 @@ export const AGE_GROUPS_DATA = [
         title: 'Средняя группа',
         leftContent: 'Малыши',
         rightContent: '2–4,5 лет',
-        background: 'green',
+        background: 'green-light',
     },
     {
         id: 2,

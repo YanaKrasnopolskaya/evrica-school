@@ -20,10 +20,10 @@ import {AGE_GROUPS_DATA} from "~/widgets/kids-club-page/age-groups";
                                   :content="true"
       />
       <div class="age-groups__img-wrapper age-groups__img-wrapper--top">
-        <img class="age-groups__img" src="/images/mobile/22-image.png" alt="малыши изображение" loading="lazy" width="328" height="384">
+        <img class="age-groups__img" src="/images/mobile/22-image.webp" alt="малыши изображение" loading="lazy" width="328" height="384">
       </div>
       <div class="age-groups__img-wrapper age-groups__img-wrapper--bottom">
-        <img class="age-groups__img" src="/images/mobile/23-image.png" alt="ребята изображение" loading="lazy" width="328" height="384">
+        <img class="age-groups__img" src="/images/mobile/23-image.webp" alt="ребята изображение" loading="lazy" width="328" height="384">
       </div>
     </div>
   </section>

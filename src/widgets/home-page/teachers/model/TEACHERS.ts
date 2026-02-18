@@ -11,21 +11,21 @@ export const TEACHERS: Teacher[] = [
         id: 1,
         name: 'Позднякова Екатерина Сергеевна',
         profession: 'учитель начальной ступени',
-        photoMobile: '/images/mobile/14-image.png',
+        photoMobile: '/images/mobile/14-image.webp',
         photoDesktop: '/images/desktop/14-image.webp'
     },
     {
         id: 2,
         name: 'Шулепова Светлана Владимировна',
         profession: 'куратор дошкольной ступени',
-        photoMobile: '/images/mobile/15-image.png',
+        photoMobile: '/images/mobile/15-image.webp',
         photoDesktop: '/images/desktop/15-image.webp'
     },
     {
         id: 3,
         name: 'Мещерякова Ирина Александровна',
         profession: 'учитель начальной ступени',
-        photoMobile: '/images/mobile/16-image.png',
+        photoMobile: '/images/mobile/16-image.webp',
         photoDesktop: '/images/desktop/16-image.webp'
     },
     {

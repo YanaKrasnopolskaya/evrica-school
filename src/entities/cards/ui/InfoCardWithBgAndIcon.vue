@@ -105,6 +105,14 @@ defineProps<Card>();
   }
 }
 .card--green {
+  background-color: $green-light;
+  .card__title,
+  .card__description,
+  .card__add-content {
+    color: $green-dark;
+  }
+}
+.card--green-light {
   background-color: $green-extra-light;
   .card__title,
   .card__description,
