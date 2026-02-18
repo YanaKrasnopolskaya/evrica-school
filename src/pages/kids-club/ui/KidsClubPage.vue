@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {TheHero} from "~/widgets/hero";
 import {BoxForAnimationSection} from "~/widgets/box-for-animation-section";
-import {ActiveDaySection} from "~/widgets/kids-club-page/active-day";
+import ActiveDaySection from "~/widgets/kids-club-page/active-day/ui/ActiveDaySection.vue";
 import {BoxForForm} from "~/widgets/box-for-form";
 import {AgeGroupsSection} from "~/widgets/kids-club-page/age-groups";
 import {FoodSection} from "~/widgets/kids-club-page/food";
