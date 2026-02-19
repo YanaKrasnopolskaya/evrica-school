@@ -6,6 +6,7 @@ import {ActiveDayForCampSection} from "~/widgets/camp-page/active-day";
 import {BoxForForm} from "~/widgets/box-for-form";
 import {TypesOfCampsSection} from "~/widgets/camp-page/types-of-camps";
 import {DailyRoutineSection} from "~/widgets/camp-page/daily-routine";
+import {SafetySection} from "~/widgets/camp-page/safety";
 </script>
 
 <template>
@@ -33,6 +34,7 @@ import {DailyRoutineSection} from "~/widgets/camp-page/daily-routine";
     />
     <types-of-camps-section />
     <daily-routine-section />
+    <safety-section />
   </div>
 </template>
 
