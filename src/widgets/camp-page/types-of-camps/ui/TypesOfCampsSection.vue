@@ -30,13 +30,13 @@ import {TYPES_CAMPS_DATA} from "~/widgets/camp-page/types-of-camps";
   align-items: center;
   justify-content: center;
   gap: 40px;
-  margin-bottom: 60px;
+  margin-bottom: 72px;
   @include tablet {
     gap: 61px;
-    margin-bottom: 100px;
+    margin-bottom: -128px;
   }
   @include desktop {
-    margin-bottom: 120px;
+    margin-bottom: 132px;
   }
   &__title {
     @include desktop {

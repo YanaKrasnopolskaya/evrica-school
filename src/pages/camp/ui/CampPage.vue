@@ -5,6 +5,7 @@ import {BoxForAnimationSection} from "~/widgets/box-for-animation-section";
 import {ActiveDayForCampSection} from "~/widgets/camp-page/active-day";
 import {BoxForForm} from "~/widgets/box-for-form";
 import {TypesOfCampsSection} from "~/widgets/camp-page/types-of-camps";
+import {DailyRoutineSection} from "~/widgets/camp-page/daily-routine";
 </script>
 
 <template>
@@ -31,6 +32,7 @@ import {TypesOfCampsSection} from "~/widgets/camp-page/types-of-camps";
                   description="Оставьте заявку, и&nbsp;мы&nbsp;подберём нужную программу"
     />
     <types-of-camps-section />
+    <daily-routine-section />
   </div>
 </template>
 
