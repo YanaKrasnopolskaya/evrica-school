@@ -34,14 +34,14 @@ import {SAFETY_DATA} from "~/widgets/camp-page/safety";
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  margin-bottom: 60px;
+  margin-bottom: 44px;
   @include tablet {
     gap: 85px;
-    margin-bottom: 100px;
+    margin-bottom: 104px;
   }
   @include desktop {
     gap: 86px;
-    margin-bottom: 120px;
+    margin-bottom: 122px;
   }
   &__title {
     @include desktop {
