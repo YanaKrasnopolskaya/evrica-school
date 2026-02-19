@@ -21,7 +21,7 @@ defineProps<Card>();
       <h3 class="card__info-title" v-html="title"></h3>
       <p class="card__info-description" v-html="description"></p>
       <ul class="card__list">
-        <li class="card__list-item" v-for="(item, index) in items" :key="index">{{ item }}</li>
+        <li class="card__list-item" v-for="(item, index) in items" :key="index" v-html="item"></li>
       </ul>
     </div>
     <div v-if="page" class="card__link">

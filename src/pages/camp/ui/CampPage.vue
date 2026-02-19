@@ -3,6 +3,8 @@ import {TheHero} from "~/widgets/hero";
 import {BrightVacationSection} from "~/widgets/camp-page/bright-vacation";
 import {BoxForAnimationSection} from "~/widgets/box-for-animation-section";
 import {ActiveDayForCampSection} from "~/widgets/camp-page/active-day";
+import {BoxForForm} from "~/widgets/box-for-form";
+import {TypesOfCampsSection} from "~/widgets/camp-page/types-of-camps";
 </script>
 
 <template>
@@ -24,11 +26,29 @@ import {ActiveDayForCampSection} from "~/widgets/camp-page/active-day";
         <active-day-for-camp-section />
       </template>
     </box-for-animation-section>
+    <box-for-form class="form"
+                  title="Хотите узнать больше о&nbsp;сменах?"
+                  description="Оставьте заявку, и&nbsp;мы&nbsp;подберём нужную программу"
+    />
+    <types-of-camps-section />
   </div>
 </template>
 
 <style scoped lang="scss">
 .box-animate {
-  height: 2766px;
+  @include tablet {
+    margin-bottom: 100px;
+  }
+  @include desktop {
+    height: 2766px;
+    margin-bottom: 122px;
+  }
+}
+.form {
+  @include desktop {
+    :deep(.box__info-description) {
+      width: 380px;
+    }
+  }
 }
 </style>
