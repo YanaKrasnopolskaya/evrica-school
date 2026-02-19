@@ -1,6 +1,6 @@
 <script setup lang="ts">
 interface Card {
-  imageDesktop: string;
+  imageDesktop?: string;
   imageMobile: string;
   imageAlt: string;
   imageWidth: string;
@@ -8,6 +8,7 @@ interface Card {
   cardTitle?: string;
   cardDescription?: string;
   additionalContent?: string;
+  addText?: string;
 }
 
 defineProps<Card>();
@@ -35,6 +36,7 @@ defineProps<Card>();
     <div class="card__info">
       <slot name="card-feature"></slot>
       <h3 v-if="cardTitle" class="card__title" v-html="cardTitle"></h3>
+      <span v-if="addText" class="card__add-text" v-html="addText"></span>
       <p class="card__description" v-html="cardDescription"></p>
     </div>
   </div>
@@ -101,6 +103,13 @@ defineProps<Card>();
     @include tablet {
       font-size: 1.375rem;
     }
+  }
+  &__add-text {
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    color: $white;
   }
 }
 </style>

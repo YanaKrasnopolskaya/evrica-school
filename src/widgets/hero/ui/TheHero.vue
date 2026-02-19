@@ -291,4 +291,30 @@ useScrollLock([isOpenPopup]);
     }
   }
 }
+.hero--camp {
+  .hero__page-name {
+    background: $green-extra-light;
+    color: $green;
+  }
+  .hero__img {
+    transform: scale(1.35) translate(-12%, 12%);
+  }
+  @include tablet {
+    .info__text {
+      width: 440px;
+    }
+    .hero__img {
+      transform: scale(1);
+      object-position: center top;
+    }
+  }
+  @include desktop {
+    .hero__info-wrapper {
+      gap: 19px;
+    }
+    .hero__img {
+      object-position: center center;
+    }
+  }
+}
 </style>

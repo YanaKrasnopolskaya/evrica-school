@@ -1,0 +1,1 @@
+export { default as CampPage } from './ui/CampPage.vue';
