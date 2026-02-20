@@ -1,4 +1,10 @@
-export const ANSWERS_DATA = [
+interface Answer {
+    id: number;
+    question: string;
+    answer: string;
+}
+
+export const ANSWERS_DATA: Answer[] = [
     {
         id: 1,
         question: 'Что взять с&nbsp;собой в&nbsp;лагерь?',

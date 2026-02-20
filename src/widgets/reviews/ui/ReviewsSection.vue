@@ -8,7 +8,9 @@ import {BaseButton} from "~/shared/ui/button";
       <h2 class="reviews__title">Наши истории успеха</h2>
       <div class="reviews__btn-wrapper">
         <img src="/images/mobile/2gis.webp" alt="2Гис" class="reviews__2gis-logo" width="182" height="67">
-        <base-button class="reviews__btn">Оставить отзыв</base-button>
+        <NuxtLink class="card__review-link" to="https://2gis.ru/kemerovo/firm/70000001103541145/tab/reviews?m=86.174921%2C55.344504%2F16" target="_blank" rel="noopener noreferrer">
+          <base-button class="reviews__btn">Оставить отзыв</base-button>
+        </NuxtLink>
       </div>
     </div>
     <div class="reviews__card-wrapper">

@@ -1,4 +1,6 @@
-export const TYPES_CAMPS_DATA = [
+import type {ListCard} from "~/entities/cards/ui/InfoCardWithList.vue";
+
+export const TYPES_CAMPS_DATA: ListCard[] = [
     {
         id: 1,
         title: 'Городской лагерь',

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {BaseButton} from "~/shared/ui/button";
 import ThePopup from "../../../popup/ui/ThePopup.vue";
-import {useScrollLock} from "~/features/use-scroll";
+import {useScrollLock} from "~/shared/utils/use-scroll";
 
 const isOpenPopup = ref(false);
 useScrollLock([isOpenPopup]);

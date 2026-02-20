@@ -1,16 +1,17 @@
 <script setup lang="ts">
 import {BaseButton} from "~/shared/ui/button";
 import ThePopup from "../../../widgets/popup/ui/ThePopup.vue";
-import {useScrollLock} from "~/features/use-scroll";
+import {useScrollLock} from "~/shared/utils/use-scroll";
 
-interface Card {
+export interface TariffCard {
+  id: number;
   title: string;
   buttonText: string;
   color?: string;
   description?: string;
   price?: string;
 }
-defineProps<Card>();
+defineProps<TariffCard>();
 
 const isOpenPopup = ref(false);
 useScrollLock([isOpenPopup]);

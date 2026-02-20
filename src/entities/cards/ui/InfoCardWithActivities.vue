@@ -1,10 +1,10 @@
 <script setup lang="ts">
 export interface ActivitiesCard {
-  id: number;
-  title: string;
-  text: string;
-  icon: string;
-  color: string;
+  id?: number;
+  title?: string;
+  text?: string;
+  icon?: string;
+  color?: string;
 }
 
 defineProps<ActivitiesCard>();

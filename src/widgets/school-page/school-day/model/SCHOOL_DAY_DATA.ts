@@ -1,4 +1,6 @@
-export const SCHOOL_DAY_DATA = [
+import type {AnimateCard} from "~/entities/cards/ui/AnimationCard.vue";
+
+export const SCHOOL_DAY_DATA: AnimateCard[] = [
     {
         id: 1,
         title: 'Учебная часть',

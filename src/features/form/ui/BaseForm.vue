@@ -3,7 +3,7 @@ import { BaseInput } from '~/shared/ui/input';
 import { BaseButton, BaseCheck } from '~/shared/ui/button';
 import { vMaska } from 'maska/vue';
 import { useFormSubmit } from '~/features/form';
-import { validateField } from '~/features/validation';
+import { validateField } from '~/shared/utils/validation';
 import type { FormData } from '~/features/form';
 
 const consent = ref<boolean>(false);

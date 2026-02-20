@@ -32,7 +32,7 @@ const infoCards = computed(() => CLASSES_DATA.filter(item => item.type === 'info
                               :image-alt="card.imageAlt"
                               :image-width="card.imageWidth"
                               :image-height="card.imageHeight"
-                              :card-title="card.title" />
+                              :title="card.title" />
       <span class="classes__add-info">Ребёнка можно привести и&nbsp;забрать в&nbsp;удобное время</span>
     </div>
   </div>

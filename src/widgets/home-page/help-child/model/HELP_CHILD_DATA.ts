@@ -1,4 +1,6 @@
-export const HELP_CHILD_DATA = [
+import type {IconCard} from "~/entities/cards/ui/InfoCardWithIcon.vue";
+
+export const HELP_CHILD_DATA: IconCard[] = [
     {
         id: 1,
         title: '7 лет вместе',

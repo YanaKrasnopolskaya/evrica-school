@@ -1,4 +1,4 @@
-import { formSchema } from '~/features/validation';
+import { formSchema } from '~/shared/utils/validation';
 import axios from 'axios';
 import type { FormData } from '~/features/form';
 

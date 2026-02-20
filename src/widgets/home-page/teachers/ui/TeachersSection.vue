@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {ArrowButton} from "~/shared/ui/button";
 import {TEACHERS} from "~/widgets/home-page/teachers";
-import { useHorizontalScroll } from "~/features/horizontal-scroll";
+import { useHorizontalScroll } from "~/shared/utils/horizontal-scroll";
 
 const scrollStep = 322;
 const { container: cards, showLeftBtn, scrollLeft, scrollRight } = useHorizontalScroll(scrollStep);
@@ -125,7 +125,7 @@ const { container: cards, showLeftBtn, scrollLeft, scrollRight } = useHorizontal
       transform: translateY(-155px);
     }
     @include desktop {
-      transform: translateY(-154px);
+      transform: translateY(-152px);
     }
   }
   &__info-name {
@@ -192,6 +192,9 @@ const { container: cards, showLeftBtn, scrollLeft, scrollRight } = useHorizontal
   transform: translateY(-120px);
   @include tablet {
     transform: translateY(-155px);
+  }
+  @include desktop {
+    transform: translateY(-154px);
   }
 }
 .card--6 .card__info {

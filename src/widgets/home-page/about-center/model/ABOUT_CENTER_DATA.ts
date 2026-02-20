@@ -1,4 +1,6 @@
-export const ABOUT_CENTER_DATA = [
+import type {AnimateCard} from "~/entities/cards/ui/AnimationCard.vue";
+
+export const ABOUT_CENTER_DATA: AnimateCard[] = [
     {
         id: 1,
         title: "Помогаем осваивать полезные привычки:",

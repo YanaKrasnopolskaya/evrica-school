@@ -29,7 +29,7 @@ import {ACTIVE_DAY_DATA} from "~/widgets/kids-club-page/active-day";
                               :image-alt="card.imageAlt"
                               :image-width="card.imageWidth"
                               :image-height="card.imageHeight"
-                              :card-description="card.description" />
+                              :description="card.description" />
       </template>
   </div>
 </template>

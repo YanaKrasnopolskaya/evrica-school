@@ -34,8 +34,8 @@ import {SCHOOL_DAY_DATA} from "~/widgets/school-page/school-day";
                               :image-alt="card.imageAlt"
                               :image-width="card.imageWidth"
                               :image-height="card.imageHeight"
-                              :card-title="card.title"
-                              :card-description="card.description"
+                              :title="card.title"
+                              :description="card.description"
                               :additional-content="card.additionalContent"
         >
           <template #card-feature>

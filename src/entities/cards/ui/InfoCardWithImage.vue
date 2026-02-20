@@ -1,17 +1,19 @@
 <script setup lang="ts">
-interface Card {
+export interface ImageCard {
+  id?: number;
   imageDesktop?: string;
-  imageMobile: string;
-  imageAlt: string;
-  imageWidth: string;
-  imageHeight: string;
-  cardTitle?: string;
-  cardDescription?: string;
+  imageMobile?: string;
+  imageAlt?: string;
+  imageWidth?: string;
+  imageHeight?: string;
+  title?: string;
+  description?: string;
   additionalContent?: string;
   addText?: string;
+  type?: string;
 }
 
-defineProps<Card>();
+defineProps<ImageCard>();
 </script>
 
 <template>
@@ -35,9 +37,9 @@ defineProps<Card>();
     </div>
     <div class="card__info">
       <slot name="card-feature"></slot>
-      <h3 v-if="cardTitle" class="card__title" v-html="cardTitle"></h3>
+      <h3 v-if="title" class="card__title" v-html="title"></h3>
       <span v-if="addText" class="card__add-text" v-html="addText"></span>
-      <p class="card__description" v-html="cardDescription"></p>
+      <p class="card__description" v-html="description"></p>
     </div>
   </div>
 </template>

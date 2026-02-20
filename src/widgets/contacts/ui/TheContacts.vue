@@ -4,7 +4,7 @@ import {TgButton} from "~/shared/ui/button";
 
 <template>
   <div class="container">
-    <section class="contacts-wrapper">
+    <section class="contacts-wrapper" id="contacts">
       <div class="contacts">
         <span class="contacts__section-name">Наши контакты</span>
         <div class="contacts__content">
@@ -119,5 +119,8 @@ import {TgButton} from "~/shared/ui/button";
 iframe {
   border: none;
   border-radius: 24px;
+}
+#contacts {
+  scroll-margin-top: 100px;
 }
 </style>

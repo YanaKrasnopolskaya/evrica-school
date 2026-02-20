@@ -3,12 +3,14 @@ const emit = defineEmits(['click']);
 </script>
 
 <template>
-  <button class="tg-btn" type="button" @click="emit('click')">
-    <span class="tg-btn__text">Написать в Telegram</span>
-    <svg class="tg-btn__icon" width="32" height="32" aria-hidden="true">
-      <use href="/sprite/sprite.svg#icon_tg"></use>
-    </svg>
-  </button>
+  <NuxtLink class="card__review-link" to="https://telegram.org/" target="_blank" rel="noopener noreferrer">
+    <button class="tg-btn" type="button" @click="emit('click')">
+      <span class="tg-btn__text">Написать в Telegram</span>
+      <svg class="tg-btn__icon" width="32" height="32" aria-hidden="true">
+        <use href="/sprite/sprite.svg#icon_tg"></use>
+      </svg>
+    </button>
+  </NuxtLink>
 </template>
 
 <style scoped lang="scss">

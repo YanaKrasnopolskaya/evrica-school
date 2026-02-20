@@ -1,12 +1,13 @@
 <script setup lang="ts">
-interface Card {
+export interface ReviewCard {
+  id: number;
   avatar: string;
   avatarName: string;
   ratingDate: string;
   review: string;
 }
 
-defineProps<Card>();
+defineProps<ReviewCard>();
 </script>
 
 <template>

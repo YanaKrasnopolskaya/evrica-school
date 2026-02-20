@@ -1,4 +1,6 @@
-export const SAFETY_DATA = [
+import type {BgAndIconCard} from "~/entities/cards/ui/InfoCardWithBgAndIcon.vue";
+
+export const SAFETY_DATA: BgAndIconCard[] = [
     {
         id: 1,
         title: 'Постоянный присмотр',

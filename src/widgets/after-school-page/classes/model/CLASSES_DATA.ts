@@ -1,4 +1,6 @@
-export const CLASSES_DATA = [
+import type {AnimateCard} from "~/entities/cards/ui/AnimationCard.vue";
+
+export const CLASSES_DATA: AnimateCard[] = [
     {
         id: 1,
         icon: "icon_robot-light",

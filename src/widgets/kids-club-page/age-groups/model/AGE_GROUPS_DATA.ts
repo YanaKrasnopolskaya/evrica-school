@@ -1,4 +1,6 @@
-export const AGE_GROUPS_DATA = [
+import type {BgAndIconCard} from "~/entities/cards/ui/InfoCardWithBgAndIcon.vue";
+
+export const AGE_GROUPS_DATA: BgAndIconCard[] = [
     {
         id: 1,
         icon: 'icon_film',

@@ -1,5 +1,5 @@
 import { object } from 'yup';
-import { ageRule, nameRule, phoneRule, consentRule } from '~/features/validation';
+import { ageRule, nameRule, phoneRule, consentRule } from '~/shared/utils/validation';
 
 // схема валидации
 export const formSchema = object({

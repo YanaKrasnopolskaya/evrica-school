@@ -1,5 +1,6 @@
+import type {SmallCard} from "~/entities/cards/ui/SmallCardWithFeatures.vue";
 
-export const FOOD_DATA = [
+export const FOOD_DATA: SmallCard[] = [
     {
         id: 1,
         title: 'Завтрак',

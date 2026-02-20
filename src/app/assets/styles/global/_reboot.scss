@@ -10,6 +10,7 @@
 }
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 body {
   display: flex;
@@ -69,6 +70,5 @@ h2 {
 
 .no-scroll {
   overflow: hidden;
-  height: 100vh;
   touch-action: none;
 }

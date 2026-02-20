@@ -1,4 +1,4 @@
-import { formSchema } from '~/features/validation';
+import { formSchema } from '~/shared/utils/validation';
 import type { FormData } from '~/features/form';
 
 // функция проверки поля(для фокуса и др.).

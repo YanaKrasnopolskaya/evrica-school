@@ -1,14 +1,15 @@
 <script setup lang="ts">
-interface Card {
+export interface IconCard {
+  id?: number;
   title?: string;
-  icon: string;
-  iconWidth: string;
-  iconHeight: string;
-  description: string;
-  color: string;
+  icon?: string;
+  iconWidth?: string;
+  iconHeight?: string;
+  description?: string;
+  color?: string;
 }
 
-defineProps<Card>();
+defineProps<IconCard>();
 </script>
 
 <template>

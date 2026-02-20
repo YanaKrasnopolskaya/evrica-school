@@ -1,20 +1,22 @@
 <script setup lang="ts">
-interface Card {
+export interface AnimateCard {
+  id?: number;
   title?: string;
   description?: string;
   icon?: string;
   iconWidth?: string;
   iconHeight?: string;
-  background: string;
-  imageDesktop: string;
-  imageMobile: string;
-  imageAlt: string;
-  imageWidth: string;
-  imageHeight: string;
+  background?: string;
+  imageDesktop?: string;
+  imageMobile?: string;
+  imageAlt?: string;
+  imageWidth?: string;
+  imageHeight?: string;
   additionalContent?: string;
+  type?: string;
 }
 
-defineProps<Card>();
+defineProps<AnimateCard>();
 </script>
 
 <template>

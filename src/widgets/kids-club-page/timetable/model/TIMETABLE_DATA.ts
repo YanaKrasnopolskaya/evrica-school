@@ -1,4 +1,6 @@
-export const TIMETABLE_DATA = [
+import type {TimeTableCard} from "~/entities/cards/ui/TimeTableCard.vue";
+
+export const TIMETABLE_DATA: TimeTableCard[] = [
     {
         id: 1,
         title: '08:00–09:45',

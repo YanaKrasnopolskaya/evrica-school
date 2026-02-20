@@ -1,4 +1,6 @@
-export const PROGRAM_DATA = [
+import type {BgAndIconCard} from "~/entities/cards/ui/InfoCardWithBgAndIcon.vue";
+
+export const PROGRAM_DATA: BgAndIconCard[] = [
     {
         id: 1,
         icon: 'icon_film',

@@ -1,4 +1,6 @@
-export const RHYTHM_DATA = [
+import type {BgAndIconCard} from "~/entities/cards/ui/InfoCardWithBgAndIcon.vue";
+
+export const RHYTHM_DATA: BgAndIconCard[] = [
     {
         id: 1,
         title: 'Если ребёнку нужен сон',

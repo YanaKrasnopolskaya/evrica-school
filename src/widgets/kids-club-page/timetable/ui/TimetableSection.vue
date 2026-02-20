@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {groupCardsByColor} from "~/shared/utils/groupCardsByColor";
+import {groupCardsByColor} from "~/shared/utils/group-cards/groupCardsByColor";
 import {TIMETABLE_DATA} from "~/widgets/kids-club-page/timetable";
 import {TimeTableCard} from "~/entities/cards";
 

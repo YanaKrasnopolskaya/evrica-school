@@ -9,7 +9,6 @@ import {FOOD_DATA} from "~/widgets/after-school-page/food";
     <div class="food__cards-wrapper">
       <info-card-with-bg-and-icon v-for="card in FOOD_DATA"
                                   :class="[`card--${card.id}`]"
-                                  :id="card.id"
                                   :key="card.id"
                                   :title="card.title"
                                   :description="card.description"

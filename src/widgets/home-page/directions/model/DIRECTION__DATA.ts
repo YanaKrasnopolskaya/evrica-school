@@ -1,15 +1,6 @@
-interface Data {
-    color: string;
-    title: string;
-    description: string;
-    icon: string;
-    iconWidth: string;
-    iconHeight: string;
-    items: string[];
-    page: string;
-}
+import type {ListCard} from "~/entities/cards/ui/InfoCardWithList.vue";
 
-export const DIRECTION_DATA: Data[] = [
+export const DIRECTION_DATA: ListCard[] = [
     {
         color: 'orange',
         title: 'Технические и&nbsp;инженерные',

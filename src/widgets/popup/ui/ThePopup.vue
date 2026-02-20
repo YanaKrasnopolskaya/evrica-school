@@ -47,6 +47,8 @@ defineEmits<{ (e: 'close'): void }>();
   z-index: 100;
   background: rgba(62, 39, 39, 0.2);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  isolation: isolate;
 }
 .popup {
   position: relative;

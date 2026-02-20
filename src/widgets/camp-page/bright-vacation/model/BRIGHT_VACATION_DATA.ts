@@ -1,4 +1,6 @@
-export const BRIGHT_VACATION_DATA = [
+import type {ImageCard} from "~/entities/cards/ui/InfoCardWithImage.vue";
+
+export const BRIGHT_VACATION_DATA: ImageCard[] = [
     {
         id: 1,
         title: '5&nbsp;дней<br> весенний лагерь',

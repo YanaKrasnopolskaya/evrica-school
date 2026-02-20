@@ -25,8 +25,8 @@ import { ArrowButton } from '~/shared/ui/button';
           :image-alt="card.image.mobile.alt"
           :image-width="card.image.mobile.width"
           :image-height="card.image.mobile.height"
-          :card-description="card.description"
-          :card-title="card.title"
+          :description="card.description"
+          :title="card.title"
         >
           <template #image-left v-if="card.page === CardRole.Camp">
             <div class="card__additional-img-wrapper">
@@ -59,9 +59,6 @@ import { ArrowButton } from '~/shared/ui/button';
           <template #card-feature>
             <arrow-button class="card__btn" />
           </template>
-          <template #card-title
-            ><h3 class="card__title">{{ card.title }}</h3></template
-          >
         </info-card-with-image>
       </NuxtLink>
     </div>

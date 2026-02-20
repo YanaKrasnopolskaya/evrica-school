@@ -3,7 +3,7 @@ import { TheNavigation } from '~/features/navigation';
 import { BaseButton } from '~/shared/ui/button';
 import { TheMenu } from '~/features/menu';
 import ThePopup from '~/widgets/popup/ui/ThePopup.vue';
-import {useScrollLock} from "~/features/use-scroll";
+import {useScrollLock} from "~/shared/utils/use-scroll";
 
 const isOpenMenu = ref(false);
 const isOpenPopup = ref(false);

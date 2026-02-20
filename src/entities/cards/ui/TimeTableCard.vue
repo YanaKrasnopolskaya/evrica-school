@@ -1,11 +1,12 @@
 <script setup lang="ts">
-interface Card {
-  title: string;
-  description: string;
+export interface TimeTableCard {
+  id?: number;
+  title?: string;
+  description?: string;
   color: string;
 }
 
-defineProps<Card>();
+defineProps<TimeTableCard>();
 </script>
 
 <template>

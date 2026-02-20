@@ -1,11 +1,11 @@
 <script setup lang="ts">
 export interface BgAndIconCard {
-  id: number;
+  id?: number;
   icon?: string;
   iconWidth?: string;
   iconHeight?: string;
-  background: string;
-  title: string;
+  background?: string;
+  title?: string;
   description?: string;
   content?: boolean;
   leftContent?: string;

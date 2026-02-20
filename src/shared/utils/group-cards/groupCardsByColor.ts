@@ -1,13 +1,8 @@
-type BaseCard = {
-    id: number,
-    title: string,
-    description: string,
-    color: string,
-}
-
 /* функция групировки карточек по цветам в массив объектов.
     Принимаем массив карточек */
-export function groupCardsByColor<T extends BaseCard>(array: T[]): Array<{ color: string; cards: T[] }> {
+import type {TimeTableCard} from "../../../entities/cards/ui/TimeTableCard.vue";
+
+export function groupCardsByColor<T extends TimeTableCard>(array: T[]): Array<{ color: string; cards: T[] }> {
     // коллекция цветов
     const setColor = new Set<string>();
     // массив объектов с цветами и карточками

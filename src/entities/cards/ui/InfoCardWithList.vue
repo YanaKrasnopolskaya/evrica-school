@@ -1,18 +1,19 @@
 <script setup lang="ts">
 import {ArrowButton} from "~/shared/ui/button";
 
-interface Card {
-  color: string;
-  title: string;
-  description: string;
-  icon: string;
-  iconWidth: string;
-  iconHeight: string;
-  items: string[];
+export interface ListCard {
+  id?: number;
+  color?: string;
+  title?: string;
+  description?: string;
+  icon?: string;
+  iconWidth?: string;
+  iconHeight?: string;
+  items?: string[];
   page?: string;
 }
 
-defineProps<Card>();
+defineProps<ListCard>();
 </script>
 
 <template>

@@ -1,10 +1,14 @@
 <script setup lang="ts">
-interface Card {
+export interface SmallCard {
+  id?: number;
   title?: string;
-  description: string;
+  description?: string;
+  icon?: string;
+  iconWidth?: string;
+  iconHeight?: string;
 }
 
-defineProps<Card>();
+defineProps<SmallCard>();
 </script>
 
 <template>

@@ -1,4 +1,6 @@
-export const DAILY_ROUTINE_URBAN_DATA = [
+import type {TimeTableCard} from "~/entities/cards/ui/TimeTableCard.vue";
+
+export const DAILY_ROUTINE_URBAN_DATA: TimeTableCard[] = [
     {
         id: 1,
         title: '09:00–10:00',

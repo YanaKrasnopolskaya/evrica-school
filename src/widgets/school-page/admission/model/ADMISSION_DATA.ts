@@ -1,4 +1,6 @@
-export const ADMISSION_DATA = [
+import type {IconCard} from "~/entities/cards/ui/InfoCardWithIcon.vue";
+
+export const ADMISSION_DATA: IconCard[] = [
     {
         id: 1,
         title: '1',

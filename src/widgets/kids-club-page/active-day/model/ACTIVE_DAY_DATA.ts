@@ -1,4 +1,6 @@
-export const ACTIVE_DAY_DATA = [
+import type {AnimateCard} from "~/entities/cards/ui/AnimationCard.vue";
+
+export const ACTIVE_DAY_DATA: AnimateCard[] = [
     {
         id: 1,
         icon: "icon_monitor-light",

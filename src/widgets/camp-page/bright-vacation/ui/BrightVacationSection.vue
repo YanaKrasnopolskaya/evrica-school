@@ -19,8 +19,8 @@ import {BRIGHT_VACATION_DATA} from "~/widgets/camp-page/bright-vacation";
             :image-alt="card.imageAlt"
             :image-width="card.imageWidth"
             :image-height="card.imageHeight"
-            :card-description="card.description"
-            :card-title="card.title"
+            :description="card.description"
+            :title="card.title"
             :add-text="card.addText"
         >
           <template #card-feature>
@@ -38,8 +38,8 @@ import {BRIGHT_VACATION_DATA} from "~/widgets/camp-page/bright-vacation";
           :image-alt="card.imageAlt"
           :image-width="card.imageWidth"
           :image-height="card.imageHeight"
-          :card-description="card.description"
-          :card-title="card.title"
+          :description="card.description"
+          :title="card.title"
       />
     </div>
   </section>
