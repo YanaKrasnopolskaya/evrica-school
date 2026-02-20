@@ -8,7 +8,10 @@ import {TypesOfCampsSection} from "~/widgets/camp-page/types-of-camps";
 import {DailyRoutineSection} from "~/widgets/camp-page/daily-routine";
 import {SafetySection} from "~/widgets/camp-page/safety";
 import {TARIFFS_FOR_CAMP_DATA, TariffsSection} from "~/widgets/tariffs";
-import {TariffCard} from "~/entities/cards";
+import {ReviewsCard, TariffCard} from "~/entities/cards";
+import {REVIEWS_FOR_CAMP_DATA, ReviewsSection} from "~/widgets/reviews";
+import BaseDropdown from "~/shared/ui/dropdown/ui/BaseDropdown.vue";
+import {AnswersSection} from "~/widgets/camp-page/answers";
 </script>
 
 <template>
@@ -53,6 +56,20 @@ import {TariffCard} from "~/entities/cards";
         <span class="tariffs__text">*Мы&nbsp;позаботились о&nbsp;гибкости оплаты: можно внести всю сумму сразу или оплачивать лагерь по&nbsp;дням</span>
       </template>
     </tariffs-section>
+    <reviews-section class="reviews">
+      <template #cards>
+        <reviews-card v-for="(card, index) in REVIEWS_FOR_CAMP_DATA"
+                      :key="index"
+                      class="reviews__card"
+                      :class="[ `reviews__card--${card.id}` ]"
+                      :avatar="card.avatar"
+                      :avatar-name="card.avatarName"
+                      :rating-date="card.reviewDate"
+                      :review="card.review"
+        />
+      </template>
+    </reviews-section>
+    <answers-section />
   </div>
 </template>
 
@@ -75,6 +92,7 @@ import {TariffCard} from "~/entities/cards";
 }
 .tariffs {
   gap: 36px;
+  margin-bottom: 60px;
   &__text {
     font-weight: 500;
     font-size: 1rem;
@@ -98,6 +116,7 @@ import {TariffCard} from "~/entities/cards";
   }
   @include tablet {
     gap: 54px;
+    margin-bottom: 98px;
     &__card {
       width: 646px;
       height: 370px;
@@ -124,10 +143,62 @@ import {TariffCard} from "~/entities/cards";
   }
   @include desktop {
     gap: 60px;
+    margin-bottom: 158px;
     :deep(.tariffs__cards-wrapper) {
       grid-template-columns: repeat(2, 1fr);
       gap: 20px 26px;
     }
+  }
+}
+.reviews {
+  margin-bottom: 62px;
+  &__card {
+    width: 100%;
+    height: 399px;
+    @include tablet {
+      width: 354px;
+      height: 402px;
+    }
+    @include desktop {
+      width: 420px;
+    }
+  }
+
+  &__card--1 {
+    :deep(.card__review) {
+      transform: translateY(-7px);
+    }
+  }
+
+  &__card--2 {
+    :deep(.card__review) {
+      transform: translateY(-16px);
+      @include tablet {
+        transform: translateY(-8px);
+      }
+    }
+  }
+
+  &__card--3 {
+    display: none;
+    :deep(.card__rating-wrapper) {
+      justify-content: flex-start;
+    }
+    :deep(.card__review) {
+      transform: translateY(-8px);
+    }
+    @include desktop {
+      display: flex;
+    }
+  }
+  @include tablet {
+    margin-bottom: 82px;
+    :deep(.reviews__title) {
+      font-size: 4rem;
+    }
+  }
+  @include desktop {
+    margin-bottom: 120px;
   }
 }
 </style>

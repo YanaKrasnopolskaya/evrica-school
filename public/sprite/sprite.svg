@@ -1,4 +1,8 @@
 <svg>
+    <symbol id="icon_open-drop" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30.4576 30.4586L21.4993 21.5003M21.4993 21.5003L12.541 12.542M21.4993 21.5003L30.4577 12.542M21.4993 21.5003L12.541 30.4587" stroke="#ED3D5A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
     <symbol id="icon_check-mark" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0.5 3.32845L3.32843 6.15688L8.98468 0.5" stroke="#3E2727" stroke-linecap="round" stroke-linejoin="round" fill="currentColor" />
     </symbol>

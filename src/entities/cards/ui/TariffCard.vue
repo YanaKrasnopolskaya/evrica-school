@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import {BaseButton} from "~/shared/ui/button";
+import ThePopup from "../../../widgets/popup/ui/ThePopup.vue";
+import {useScrollLock} from "~/features/use-scroll";
 
 interface Card {
   title: string;
@@ -9,6 +11,9 @@ interface Card {
   price?: string;
 }
 defineProps<Card>();
+
+const isOpenPopup = ref(false);
+useScrollLock([isOpenPopup]);
 </script>
 
 <template>
@@ -16,8 +21,11 @@ defineProps<Card>();
     <h3 class="card__title" v-html="title"></h3>
     <p v-if="description" class="card__description" v-html="description"></p>
     <span v-if="price" class="card__price" v-html="price"></span>
-    <base-button class="card__btn">{{ buttonText }}</base-button>
+    <base-button class="card__btn" @click="isOpenPopup = true">{{ buttonText }}</base-button>
     <slot name="additional-content"></slot>
+    <Teleport to="body">
+      <the-popup :is-open="isOpenPopup" @close="isOpenPopup = false" />
+    </Teleport>
   </div>
 </template>
 

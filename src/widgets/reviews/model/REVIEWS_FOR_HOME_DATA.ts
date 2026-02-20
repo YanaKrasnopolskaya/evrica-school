@@ -6,7 +6,7 @@ interface Review {
     reviewDate: string;
 }
 
-export const REVIEWS_DATA: Review[] = [
+export const REVIEWS_FOR_HOME_DATA: Review[] = [
     {
         id: 1,
         avatar: '/images/mobile/avatar1.webp',
@@ -50,6 +50,4 @@ export const REVIEWS_DATA: Review[] = [
         review: 'Лучший центр для детей в&nbsp;городе, вожу внука и&nbsp;внучку. Занятия всегда разнообразные, детям очень нравится!',
         reviewDate: '6 сентября 2022'
     },
-
-
 ]
