@@ -3,6 +3,8 @@ import {TheHero} from "~/widgets/hero";
 import {ActiveDayForCampSection} from "~/widgets/camp-page/active-day";
 import {BoxForAnimationSection} from "~/widgets/box-for-animation-section";
 import {ClassesSection} from "~/widgets/after-school-page/classes";
+import {HomeWorkSection} from "~/widgets/after-school-page/home-work";
+import {ActivitiesSection} from "~/widgets/after-school-page/activities";
 </script>
 
 <template>
@@ -24,16 +26,21 @@ import {ClassesSection} from "~/widgets/after-school-page/classes";
         <classes-section />
       </template>
     </box-for-animation-section>
+    <home-work-section />
+    <activities-section />
   </div>
 </template>
 
 <style scoped lang="scss">
 .box-animate {
+  margin-bottom: 58px;
   @include tablet {
     padding-bottom: 24px;
+    margin-bottom: 100px;
   }
   @include desktop {
     height: 2865px;
+    margin-bottom: 120px;
   }
 }
 </style>
