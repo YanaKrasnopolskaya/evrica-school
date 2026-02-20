@@ -1,0 +1,1 @@
+export { default as AfterSchoolPage } from './ui/AfterSchoolPage.vue';

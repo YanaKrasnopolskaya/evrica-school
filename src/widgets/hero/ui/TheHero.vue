@@ -10,6 +10,7 @@ interface HeroInfo {
   textBtn: string;
   additionalText: string;
   imgMobile: string;
+  imgTablet?: string;
   imgDesktop: string;
   imgAlt: string;
 }
@@ -66,7 +67,8 @@ useScrollLock([isOpenPopup]);
     </div>
     <div class="hero__img-wrapper">
       <picture>
-        <source :srcset="imgDesktop" type="" media="(min-width: 768px)" />
+        <source :srcset="imgDesktop" type="" media="(min-width: 1024px)" />
+        <source :srcset="imgTablet" type="" media="(min-width: 768px)" />
         <!-- decoding="async" - распаковка картинки не блочит рендер, fetchpriority="high" - приоритет загрузки -->
         <img class="hero__img" :src="imgMobile" :alt="imgAlt" width="367" height="245" decoding="async" fetchpriority="high"/>
       </picture>
@@ -314,6 +316,25 @@ useScrollLock([isOpenPopup]);
     }
     .hero__img {
       object-position: center center;
+    }
+  }
+}
+.hero--after-school {
+  .hero__page-name {
+    background: $orange-light;
+    color: $orange;
+  }
+  .hero__img {
+    object-position: center top;
+  }
+  @include tablet {
+    .info__text {
+      width: 440px;
+    }
+  }
+  @include desktop {
+    .hero__info-wrapper {
+      gap: 19px;
     }
   }
 }
