@@ -60,9 +60,11 @@ import {CREATIVE_DATA, EDUCATIONAL_DATA, TECHNICAL_DATA} from "~/widgets/after-s
   margin-bottom: 60px;
   @include tablet {
     gap: 60px;
+    margin-bottom: 100px;
   }
   @include desktop {
     gap: 56px;
+    margin-bottom: 120px;
   }
   &__cards-wrapper {
     width: 100%;

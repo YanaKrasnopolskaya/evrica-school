@@ -5,6 +5,7 @@ import {BoxForAnimationSection} from "~/widgets/box-for-animation-section";
 import {ClassesSection} from "~/widgets/after-school-page/classes";
 import {HomeWorkSection} from "~/widgets/after-school-page/home-work";
 import {ActivitiesSection} from "~/widgets/after-school-page/activities";
+import {FoodSection} from "~/widgets/after-school-page/food";
 </script>
 
 <template>
@@ -28,6 +29,7 @@ import {ActivitiesSection} from "~/widgets/after-school-page/activities";
     </box-for-animation-section>
     <home-work-section />
     <activities-section />
+    <food-section />
   </div>
 </template>
 

@@ -1,5 +1,6 @@
 <script setup lang="ts">
-interface Card {
+export interface BgAndIconCard {
+  id: number;
   icon?: string;
   iconWidth?: string;
   iconHeight?: string;
@@ -11,7 +12,7 @@ interface Card {
   rightContent?: string;
 }
 
-defineProps<Card>();
+defineProps<BgAndIconCard>();
 </script>
 
 <template>
