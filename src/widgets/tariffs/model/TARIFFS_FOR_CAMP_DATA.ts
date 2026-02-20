@@ -24,7 +24,7 @@ export const TARIFFS_FOR_CAMP_DATA = [
         buttonText: 'Записаться'
     },
     {
-        id: 3,
+        id: 4,
         title: '10&nbsp;дней загородный&nbsp;лагерь',
         description: 'Для детей, готовых к&nbsp;самостоятельности, жизни на&nbsp;природе и&nbsp;проживанию в&nbsp;лагере',
         price: '38&nbsp;000&nbsp;₽',

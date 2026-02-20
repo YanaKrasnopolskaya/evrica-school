@@ -34,10 +34,10 @@ import {FOOD_DATA} from "~/widgets/after-school-page/food";
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  margin-bottom: 44px;
+  margin-bottom: 38px;
   @include tablet {
     gap: 85px;
-    margin-bottom: 104px;
+    margin-bottom: 102px;
   }
   @include desktop {
     gap: 86px;
