@@ -8,3 +8,4 @@ export { default as InfoCardWithBgAndIcon } from './ui/InfoCardWithBgAndIcon.vue
 export { default as TimeTableCard } from './ui/TimeTableCard.vue';
 export { default as TariffCard } from './ui/TariffCard.vue';
 export { default as InfoCardWithActivities } from './ui/InfoCardWithActivities.vue';
+export { default as CardWithDocument } from './ui/CardWithDocument.vue';

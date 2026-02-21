@@ -34,9 +34,11 @@ useScrollLock([isOpenPopup]);
             class="hero__bg-img"
             src="/images/desktop/dt-hero-bg-img.webp"
             alt="Логотип Эврика"
-            width="649"
-            height="580"
+            width="608"
+            height="538"
             fetchpriority="high"
+            decoding="async"
+            loading="eager"
         />
       </picture>
       <div class="info">

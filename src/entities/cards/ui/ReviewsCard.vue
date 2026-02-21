@@ -1,10 +1,10 @@
 <script setup lang="ts">
 export interface ReviewCard {
-  id: number;
-  avatar: string;
-  avatarName: string;
-  ratingDate: string;
-  review: string;
+  id?: number;
+  avatar?: string;
+  avatarName?: string;
+  ratingDate?: string;
+  review?: string;
 }
 
 defineProps<ReviewCard>();

@@ -33,7 +33,8 @@ import {HELP_CHILD_DATA} from "~/widgets/home-page/help-child";
             alt="Логотип Эврика"
             width="408"
             height="272"
-            loading="lazy"
+            loading="eager"
+            fetchpriority="high"
           />
         </picture>
       </div>

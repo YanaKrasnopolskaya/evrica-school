@@ -57,9 +57,9 @@ export default defineNuxtConfig({
         },
         {
           rel: 'preload',
-          href: '/fonts/Montserrat-SemiBold.ttf',
+          href: '/fonts/Montserrat-SemiBold.woff2',
           as: 'font',
-          type: 'font/ttf',
+          type: 'font/woff2',
           crossorigin: '',
             'data-font-display': 'swap'
         },
