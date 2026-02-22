@@ -41,7 +41,6 @@ const openPopup = () => {
                 alt="Логотип Эврика"
                 width="101"
                 height="36"
-                fetchpriority="high"
               />
             </picture>
           </NuxtLink>

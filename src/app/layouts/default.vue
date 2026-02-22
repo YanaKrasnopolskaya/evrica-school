@@ -9,7 +9,7 @@ import {TheContacts} from "~/widgets/contacts";
   <div>
     <TheHeader />
     <slot />
-<!--    <TheContacts />-->
-<!--    <TheFooter />-->
+    <TheContacts />
+    <TheFooter />
   </div>
 </template>

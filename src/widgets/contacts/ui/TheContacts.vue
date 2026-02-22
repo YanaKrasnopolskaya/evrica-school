@@ -22,6 +22,8 @@ import {TgButton} from "~/shared/ui/button";
               width="100%"
               height="300"
               allowfullscreen
+              sandbox="allow-same-origin allow-scripts allow-popups allow-pointer-lock allow-forms"
+              referrerpolicy="no-referrer"
               title="Карта с адресом учебного центра Эврика"
               loading="lazy"
           >

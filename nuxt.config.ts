@@ -2,7 +2,12 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
     components: true,
-  srcDir: 'src/', // корень
+    modules : [ 'nuxt-vitalizer' ],
+    vitalizer : {
+        // Удаляем блокирующий рендеринг CSS-код
+        disableStylesheets : 'entry'
+    },
+    srcDir: 'src/', // корень
   dir: {
     // маршруты
     pages: 'app/routes',
@@ -20,7 +25,7 @@ export default defineNuxtConfig({
   css: ['~/app/assets/styles/main.scss'],
   vite: {
       build: {
-          cssCodeSplit: false // объеденяем все стили в один css, чтобы запрос был один
+          cssCodeSplit: true // объеденяем все стили в один css, чтобы запрос был один
       },
     css: {
       preprocessorOptions: {

@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { BaseButton } from '~/shared/ui/button';
-import ThePopup from "../../popup/ui/ThePopup.vue";
 import {useScrollLock} from "~/shared/utils/use-scroll";
+
+const LazyThePopup = defineAsyncComponent(() =>
+    import('~/widgets/popup').then(m => m.ThePopup)
+)
 
 interface HeroInfo {
   page: string;
@@ -18,7 +21,6 @@ interface HeroInfo {
 defineProps<HeroInfo>();
 
 const isOpenPopup = ref(false);
-useScrollLock([isOpenPopup]);
 </script>
 
 <template>
@@ -37,8 +39,6 @@ useScrollLock([isOpenPopup]);
             width="608"
             height="538"
             fetchpriority="high"
-            decoding="async"
-            loading="eager"
         />
       </picture>
       <div class="info">
@@ -55,9 +55,6 @@ useScrollLock([isOpenPopup]);
             alt="Логотип Эврика"
             width="303"
             height="106"
-            fetchpriority="high"
-            decoding="async"
-            loading="eager"
           />
         </picture>
         <span class="info__text" v-html="title"></span>
@@ -72,12 +69,12 @@ useScrollLock([isOpenPopup]);
         <source :srcset="imgDesktop" type="" media="(min-width: 1024px)" />
         <source :srcset="imgTablet" type="" media="(min-width: 768px)" />
         <!-- decoding="async" - распаковка картинки не блочит рендер, fetchpriority="high" - приоритет загрузки -->
-        <img class="hero__img" :src="imgMobile" :alt="imgAlt" width="367" height="245" decoding="async" fetchpriority="high"/>
+        <img class="hero__img" :src="imgMobile" :alt="imgAlt" width="367" height="245"/>
       </picture>
     </div>
   </section>
   <Teleport to="body">
-    <the-popup :is-open="isOpenPopup" @close="isOpenPopup = false" />
+    <LazyThePopup v-if="isOpenPopup" :is-open="isOpenPopup" @close="isOpenPopup = false" />
   </Teleport>
 </template>
 
