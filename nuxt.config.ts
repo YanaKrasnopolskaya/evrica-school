@@ -1,6 +1,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+    components: true,
   srcDir: 'src/', // корень
   dir: {
     // маршруты
@@ -63,10 +64,6 @@ export default defineNuxtConfig({
           crossorigin: '',
             'data-font-display': 'swap'
         },
-          { // предзагрузка для разработки
-              rel: 'preconnect',
-              href: 'http://localhost:3000'
-          },
       ],
     },
   },

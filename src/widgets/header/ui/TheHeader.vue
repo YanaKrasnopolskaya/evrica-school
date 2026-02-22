@@ -1,9 +1,14 @@
 <script setup lang="ts">
 import { TheNavigation } from '~/features/navigation';
 import { BaseButton } from '~/shared/ui/button';
-import { TheMenu } from '~/features/menu';
-import ThePopup from '~/widgets/popup/ui/ThePopup.vue';
 import {useScrollLock} from "~/shared/utils/use-scroll";
+
+const LazyTheMenu = defineAsyncComponent(() =>
+    import('~/features/menu').then(m => m.TheMenu)
+)
+const LazyThePopup = defineAsyncComponent(() =>
+    import('~/widgets/popup').then(m => m.ThePopup)
+)
 
 const isOpenMenu = ref(false);
 const isOpenPopup = ref(false);
@@ -36,6 +41,7 @@ const openPopup = () => {
                 alt="Логотип Эврика"
                 width="101"
                 height="36"
+                fetchpriority="high"
               />
             </picture>
           </NuxtLink>
@@ -60,10 +66,10 @@ const openPopup = () => {
           </button>
         </div>
         <Teleport to="body">
-          <the-menu class="header__menu" :is-open="isOpenMenu" @close="isOpenMenu = false" />
-        </Teleport>
-        <Teleport to="body">
-          <the-popup :is-open="isOpenPopup" @close="isOpenPopup = false" />
+          <transition name="fade">
+            <LazyTheMenu v-if="isOpenMenu" class="header__menu" :is-open="isOpenMenu" @close="isOpenMenu = false" />
+            <LazyThePopup v-if="isOpenPopup" :is-open="isOpenPopup" @close="isOpenPopup = false" />
+          </transition>
         </Teleport>
       </header>
     </div>
@@ -161,5 +167,14 @@ const openPopup = () => {
       display: none;
     }
   }
+}
+// анимация появления меню и попапа
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease-in-out;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

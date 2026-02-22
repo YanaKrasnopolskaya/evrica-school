@@ -15,44 +15,44 @@ import {REVIEWS_FOR_HOME_DATA} from "~/widgets/reviews";
 <template>
   <h1 class="visually-hidden">Главная страница школа "Эврика"</h1>
   <div class="container">
-    <the-hero
-        page="home"
-      title="Центр развития<br> и&nbsp;открытий"
-      text-btn="Записаться на пробный день"
-      additional-text="Для детей от&nbsp;2&nbsp;до&nbsp;16&nbsp;лет"
-      img-mobile="/images/mobile/1-image.webp"
-      img-desktop="/images/desktop/1-image.webp"
-      img-alt="Центр развития картинка"
-    />
-    <help-child-section />
-    <development-path-section />
-    <box-for-animation-section>
-      <template #content>
-        <about-center-section />
-      </template>
-    </box-for-animation-section>
-    <directions-section />
-    <box-for-form title="Первый шаг&nbsp;к&nbsp;открытиям вместе с&nbsp;нами"
-                  description="Запишитесь на&nbsp;экскурсию по&nbsp;центру в&nbsp;формате дружеской встречи с&nbsp;директором"
-    />
-    <features-section />
-    <reviews-section class="reviews">
-      <template #cards>
-        <reviews-card v-for="(card, index) in REVIEWS_FOR_HOME_DATA"
-                      :key="index"
-                      class="reviews__card"
-                      :class="[ `reviews__card--${card.id}` ]"
-                      :avatar="card.avatar"
-                      :avatar-name="card.avatarName"
-                      :rating-date="card.reviewDate"
-                      :review="card.review"
-        />
-      </template>
-    </reviews-section>
-    <teachers-section />
-    <box-for-form class="form__bottom" title="Начните открывать мир&nbsp;вместе&nbsp;с&nbsp;нами!"
-                  description="Опишите пожелания&nbsp;&mdash; и&nbsp;мы&nbsp;предложим идеальную программу"
-    />
+<!--    <the-hero-->
+<!--        page="home"-->
+<!--      title="Центр развития<br> и&nbsp;открытий"-->
+<!--      text-btn="Записаться на пробный день"-->
+<!--      additional-text="Для детей от&nbsp;2&nbsp;до&nbsp;16&nbsp;лет"-->
+<!--      img-mobile="/images/mobile/1-image.webp"-->
+<!--      img-desktop="/images/desktop/1-image.webp"-->
+<!--      img-alt="Центр развития картинка"-->
+<!--    />-->
+<!--    <help-child-section />-->
+<!--    <development-path-section />-->
+<!--    <box-for-animation-section>-->
+<!--      <template #content>-->
+<!--        <about-center-section />-->
+<!--      </template>-->
+<!--    </box-for-animation-section>-->
+<!--    <directions-section />-->
+<!--    <box-for-form title="Первый шаг&nbsp;к&nbsp;открытиям вместе с&nbsp;нами"-->
+<!--                  description="Запишитесь на&nbsp;экскурсию по&nbsp;центру в&nbsp;формате дружеской встречи с&nbsp;директором"-->
+<!--    />-->
+<!--    <features-section />-->
+<!--    <reviews-section class="reviews">-->
+<!--      <template #cards>-->
+<!--        <reviews-card v-for="(card, index) in REVIEWS_FOR_HOME_DATA"-->
+<!--                      :key="index"-->
+<!--                      class="reviews__card"-->
+<!--                      :class="[ `reviews__card&#45;&#45;${card.id}` ]"-->
+<!--                      :avatar="card.avatar"-->
+<!--                      :avatar-name="card.avatarName"-->
+<!--                      :rating-date="card.reviewDate"-->
+<!--                      :review="card.review"-->
+<!--        />-->
+<!--      </template>-->
+<!--    </reviews-section>-->
+<!--    <teachers-section />-->
+<!--    <box-for-form class="form__bottom" title="Начните открывать мир&nbsp;вместе&nbsp;с&nbsp;нами!"-->
+<!--                  description="Опишите пожелания&nbsp;&mdash; и&nbsp;мы&nbsp;предложим идеальную программу"-->
+<!--    />-->
   </div>
 </template>
 

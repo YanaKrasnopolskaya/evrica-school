@@ -1,7 +1,10 @@
 <script setup lang="ts">
-import { TheNavigation } from '~/features/navigation';
+import TheNavigation  from '~/features/navigation/ui/TheNavigation.vue';
 import { BaseButton } from '~/shared/ui/button';
-import ThePopup from "../../../widgets/popup/ui/ThePopup.vue";
+
+const LazyThePopup = defineAsyncComponent(() =>
+    import('~/widgets/popup').then(m => m.ThePopup)
+)
 
 const isOpenPopup = ref(false);
 
@@ -21,7 +24,9 @@ defineEmits(['close']);
       </div>
     </transition>
     <Teleport to="body">
-      <the-popup :is-open="isOpenPopup" @close="isOpenPopup = false" />
+      <transition name="fade">
+        <LazyThePopup v-if="isOpenPopup" :is-open="isOpenPopup" @close="isOpenPopup = false" />
+      </transition>
     </Teleport>
   </section>
 </template>
@@ -74,10 +79,10 @@ defineEmits(['close']);
   background: rgba(62, 39, 39, 0.2);
   backdrop-filter: blur(10px);
 }
-// анимация появления меню
+// анимация появления попапа
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 .fade-enter-from,
 .fade-leave-to {

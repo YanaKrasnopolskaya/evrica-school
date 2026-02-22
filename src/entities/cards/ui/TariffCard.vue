@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import {BaseButton} from "~/shared/ui/button";
-import ThePopup from "../../../widgets/popup/ui/ThePopup.vue";
 import {useScrollLock} from "~/shared/utils/use-scroll";
+
+const LazyThePopup = defineAsyncComponent(() =>
+    import('~/widgets/popup').then(m => m.ThePopup)
+)
 
 export interface TariffCard {
   id: number;
@@ -25,7 +28,9 @@ useScrollLock([isOpenPopup]);
     <base-button class="card__btn" @click="isOpenPopup = true">{{ buttonText }}</base-button>
     <slot name="additional-content"></slot>
     <Teleport to="body">
-      <the-popup :is-open="isOpenPopup" @close="isOpenPopup = false" />
+      <transition name="fade">
+        <LazyThePopup v-if="isOpenPopup" :is-open="isOpenPopup" @close="isOpenPopup = false" />
+      </transition>
     </Teleport>
   </div>
 </template>
@@ -124,5 +129,14 @@ useScrollLock([isOpenPopup]);
   .card__price {
     color: $green-dark;
   }
+}
+// анимация появления попапа
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease-in-out;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
