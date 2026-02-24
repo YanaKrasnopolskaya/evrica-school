@@ -17,7 +17,28 @@ export default defineNuxtConfig({
     '@assets': 'src/app/assets', // стили
   },
   css: ['~/app/assets/styles/main.scss'],
-  vite: {
+    modules: ['@nuxt/fonts'],
+    fonts: {
+        provider: 'local',
+        families: [
+            {
+                name: 'BlissPro-Light',
+                display: 'swap',
+                weight: 300,
+                src: '/fonts/BlissPro-Light.woff2',
+            },
+            {
+                name: 'BlissPro-Medium',
+                display: 'swap',
+                weight: 500,
+                src: '/fonts/BlissPro-Medium.woff',
+            },
+        ],
+        defaults: {
+            preload: true,
+        }
+    },
+    vite: {
       build: {
           cssCodeSplit: false // объеденяем все стили в один css, чтобы запрос был один! ИНАЧЕ У МЕНЯ ПРИМЕНЯЮТСЯ ДЕСКТОПНЫЕ, а не ИЗМЕНЁННЫЕ в КОМПОНЕНТАХ
       },
