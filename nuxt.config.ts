@@ -1,11 +1,6 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-    modules : [ 'nuxt-vitalizer' ] ,
-    // @ts-ignore
-    vitalizer : {
-        disableStylesheets : 'entry',
-    },
   srcDir: 'src/', // корень
   dir: {
     // маршруты
@@ -23,6 +18,9 @@ export default defineNuxtConfig({
   },
   css: ['~/app/assets/styles/main.scss'],
   vite: {
+      build: {
+          cssCodeSplit: false // объеденяем все стили в один css, чтобы запрос был один! ИНАЧЕ У МЕНЯ ПРИМЕНЯЮТСЯ ДЕСКТОПНЫЕ, а не ИЗМЕНЁННЫЕ в КОМПОНЕНТАХ
+      },
     css: {
       preprocessorOptions: {
         scss: {
