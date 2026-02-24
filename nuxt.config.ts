@@ -81,6 +81,6 @@ export default defineNuxtConfig({
       '/images/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
       '/sprite/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
     },
-      minify: true, // Минификация HTML
+      // minify: true, // Минификация HTML
   },
 });
