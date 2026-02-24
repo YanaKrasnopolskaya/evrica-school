@@ -1,6 +1,11 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+    modules : [ 'nuxt-vitalizer' ] ,
+    // @ts-ignore
+    vitalizer : {
+        disableStylesheets : 'entry',
+    },
   srcDir: 'src/', // корень
   dir: {
     // маршруты
@@ -18,9 +23,6 @@ export default defineNuxtConfig({
   },
   css: ['~/app/assets/styles/main.scss'],
   vite: {
-      build: {
-          cssCodeSplit: false // объеденяем все стили в один css, чтобы запрос был один
-      },
     css: {
       preprocessorOptions: {
         scss: {
@@ -39,34 +41,30 @@ export default defineNuxtConfig({
       meta: [{ name: 'description', content: 'Детский центр развития.' }],
       link: [
         // предзагрузка шрифтов
-        {
-          rel: 'preload',
-          href: '/fonts/BlissPro-Light.woff2',
-          as: 'font',
-          type: 'font/woff2',
-          crossorigin: '',
-            'data-font-display': 'swap'
-        },
-        {
-          rel: 'preload',
-          href: '/fonts/BlissPro-Medium.woff',
-          as: 'font',
-          type: 'font/woff',
-          crossorigin: '',
-            'data-font-display': 'swap'
-        },
-        {
-          rel: 'preload',
-          href: '/fonts/Montserrat-SemiBold.woff2',
-          as: 'font',
-          type: 'font/woff2',
-          crossorigin: '',
-            'data-font-display': 'swap'
-        },
-          { // предзагрузка для разработки
-              rel: 'preconnect',
-              href: 'http://localhost:3000'
-          },
+        // {
+        //   rel: 'preload',
+        //   href: '/fonts/BlissPro-Light.woff2',
+        //   as: 'font',
+        //   type: 'font/woff2',
+        //   crossorigin: '',
+        //     'data-font-display': 'swap'
+        // },
+        // {
+        //   rel: 'preload',
+        //   href: '/fonts/BlissPro-Medium.woff',
+        //   as: 'font',
+        //   type: 'font/woff',
+        //   crossorigin: '',
+        //     'data-font-display': 'swap'
+        // },
+        // {
+        //   rel: 'preload',
+        //   href: '/fonts/Montserrat-SemiBold.woff2',
+        //   as: 'font',
+        //   type: 'font/woff2',
+        //   crossorigin: '',
+        //     'data-font-display': 'swap'
+        // },
       ],
     },
   },
@@ -79,6 +77,6 @@ export default defineNuxtConfig({
       '/images/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
       '/sprite/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
     },
-      // minify: true, // Минификация HTML
+      minify: true, // Минификация HTML
   },
 });
